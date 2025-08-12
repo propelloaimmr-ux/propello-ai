@@ -14,15 +14,14 @@ import {
 import { getFirestore, serverTimestamp } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAiS8lUnumbhX6-0vqjiiI8zY4zC9nFBsU",
-  authDomain: "propello-ai.firebaseapp.com",
-  projectId: "propello-ai",
-  storageBucket: "propello-ai.firebasestorage.app",
-  messagingSenderId: "1062920522162",
-  appId: "1:1062920522162:web:7b7935ead257e42aef7cab",
-  measurementId: "G-X02TPF1T8T"
+  apiKey: "AIzaSyAi59wVzc6ojlg-cQf2oJRDVTD3JLqTs5s",
+  authDomain: "propello-ai-85845.firebaseapp.com",
+  projectId: "propello-ai-85845",
+  storageBucket: "propello-ai-85845.appspot.com",
+  messagingSenderId: "271073990786",
+  appId: "1:271073990786:web:830bca4cbe69f203dafc9b",
+  measurementId: "G-7JEEDVTSR6"
 };
-
 // Initialize Firebase app or use existing one
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 

@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "propello-ai"
-  }
+    "default": "propello-ai",
+    "company": "propello-ai-85845"
+  },
+  "targets": {},
+  "etags": {}
 }
