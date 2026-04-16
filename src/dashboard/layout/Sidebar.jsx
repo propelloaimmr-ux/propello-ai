@@ -109,7 +109,8 @@ export default function Sidebar() {
           borderRight: "2px solid #fc466b",
           boxShadow: isMobile ? "4px 0 20px rgba(0,0,0,0.1)" : "none",
           zIndex: 999,
-          overflow: "hidden",
+          // overflow: "hidden",
+          overflowX: "hidden",
         }}
       >
         <div
