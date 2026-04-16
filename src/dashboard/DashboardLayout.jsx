@@ -5,9 +5,11 @@ import { Outlet } from "react-router-dom";
 
 const layoutStyle = {
   display: "flex",
-  width: "100vw",
+  // width: "100vw",
+  width: "100%",
   minHeight: "100vh", // Changed from height to minHeight
-  overflow: "hidden",
+  // overflow: "hidden",
+  overflowX: "hidden",
 };
 
 const contentWrapper = {
@@ -15,7 +17,8 @@ const contentWrapper = {
   display: "flex",
   flexDirection: "column",
   minHeight: "100vh", // Changed from height to minHeight
-  overflow: "hidden",
+  // overflow: "hidden",
+  overflow: "visible",
 };
 
 const contentArea = {
@@ -26,6 +29,7 @@ const contentArea = {
   backgroundColor: "#f9f9f9",
   padding: "20px",
   overflowY: "auto", // Changed to allow vertical scrolling
+  WebkitOverflowScrolling: "touch",
   overflowX: "hidden",
   width: "100%",
 };
