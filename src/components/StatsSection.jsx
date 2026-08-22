@@ -10,8 +10,8 @@ const StatsSection = () => {
       backgroundColor: 'white',
       fontFamily: "'Inter', sans-serif",
     }}>
-      {/* Main Heading */}
-      <motion.h1 
+      {/* Section Heading */}
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -29,7 +29,7 @@ const StatsSection = () => {
         }}
       >
         Numbers That Speak For Themselves
-      </motion.h1>
+      </motion.h2>
 
       {/* Stats Grid */}
       <div style={{
@@ -68,7 +68,7 @@ const StatsSection = () => {
           }}>
             Improving onboarding & activating a customer by 5-10%
           </p>
-          <h2 style={{
+          <h3 style={{
             fontSize: 'clamp(2.5rem, 8vw, 3.5rem)',
             fontWeight: '800',
             margin: '8px 0',
@@ -77,8 +77,8 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>10%</h2>
-          <h3 style={{
+          }}>10%</h3>
+          <h4 style={{
             fontSize: '1.25rem',
             fontWeight: '700',
             marginTop: '8px',
@@ -86,7 +86,7 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>Improved Onboarding</h3>
+          }}>Improved Onboarding</h4>
         </motion.div>
 
         {/* Stat Card 2 */}
@@ -117,7 +117,7 @@ const StatsSection = () => {
           }}>
             Increasing the customer top of the funnel by 3X
           </p>
-          <h2 style={{
+          <h3 style={{
             fontSize: 'clamp(2.5rem, 8vw, 3.5rem)',
             fontWeight: '800',
             margin: '8px 0',
@@ -126,8 +126,8 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>3x</h2>
-          <h3 style={{
+          }}>3x</h3>
+          <h4 style={{
             fontSize: '1.25rem',
             fontWeight: '700',
             marginTop: '8px',
@@ -135,7 +135,7 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>Top Of The Funnel</h3>
+          }}>Top Of The Funnel</h4>
         </motion.div>
 
         {/* Stat Card 3 */}
@@ -166,7 +166,7 @@ const StatsSection = () => {
           }}>
             Reactivating churned customers by 350%
           </p>
-          <h2 style={{
+          <h3 style={{
             fontSize: 'clamp(2.5rem, 8vw, 3.5rem)',
             fontWeight: '800',
             margin: '8px 0',
@@ -175,8 +175,8 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>350%</h2>
-          <h3 style={{
+          }}>350%</h3>
+          <h4 style={{
             fontSize: '1.25rem',
             fontWeight: '700',
             marginTop: '8px',
@@ -184,7 +184,7 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>Customer Reactivation</h3>
+          }}>Customer Reactivation</h4>
         </motion.div>
 
         {/* Stat Card 4 */}
@@ -215,7 +215,7 @@ const StatsSection = () => {
           }}>
             Inbound customer calls, resolving 95% automatically
           </p>
-          <h2 style={{
+          <h3 style={{
             fontSize: 'clamp(2.5rem, 8vw, 3.5rem)',
             fontWeight: '800',
             margin: '8px 0',
@@ -224,8 +224,8 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>95%</h2>
-          <h3 style={{
+          }}>95%</h3>
+          <h4 style={{
             fontSize: '1.25rem',
             fontWeight: '700',
             marginTop: '8px',
@@ -233,7 +233,7 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>Query Resolution</h3>
+          }}>Query Resolution</h4>
         </motion.div>
 
         {/* Stat Card 5 */}
@@ -264,7 +264,7 @@ const StatsSection = () => {
           }}>
             Upsell & cross-sell reminders leading to higher conversion by 150%
           </p>
-          <h2 style={{
+          <h3 style={{
             fontSize: 'clamp(2.5rem, 8vw, 3.5rem)',
             fontWeight: '800',
             margin: '8px 0',
@@ -273,8 +273,8 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>150%</h2>
-          <h3 style={{
+          }}>150%</h3>
+          <h4 style={{
             fontSize: '1.25rem',
             fontWeight: '700',
             marginTop: '8px',
@@ -282,7 +282,7 @@ const StatsSection = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-          }}>Higher Upgrades</h3>
+          }}>Higher Upgrades</h4>
         </motion.div>
       </div>
     </div>
