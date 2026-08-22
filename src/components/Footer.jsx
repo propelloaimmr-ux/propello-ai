@@ -8,7 +8,6 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
-  const [showFAQs, setShowFAQs] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showAdminLogin, setShowAdminLogin] = useState(false);
   const [username, setUsername] = useState("");
@@ -110,36 +109,15 @@ const Footer = () => {
     setPassword("");
   };
 
+  const scrollToFAQs = () => {
+    const el = document.getElementById("faqs");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
-      {showFAQs && (
-        <>
-          <div style={overlayStyle} onClick={() => setShowFAQs(false)} />
-          <div style={modalStyle}>
-            <button style={backButtonStyle} onClick={() => setShowFAQs(false)}>
-              <FaArrowLeft /> Back
-            </button>
-            <h2 style={{ 
-              marginBottom: "1.5rem", 
-              fontSize: "1.5rem", 
-              background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
-            }}>
-              FAQs
-            </h2>
-            <div style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
-              <p><strong style={{color: "#3F5EFB"}}>How is Propello AI different from Siri, Alexa, or Google Assistant?</strong><br />
-                Propello AI is business-focused, integrates with CRM, handles mass calls, and supports Indian languages.</p>
-              <p><strong style={{color: "#3F5EFB"}}>Is Propello AI available 24/7?</strong><br />
-                Yes, it's always on.</p>
-              <p><strong style={{color: "#3F5EFB"}}>Do I need technical skills to use it?</strong><br />
-                No, it's a no-code platform for everyone.</p>
-            </div>
-          </div>
-        </>
-      )}
-
       {showPrivacy && (
         <>
           <div style={overlayStyle} onClick={() => setShowPrivacy(false)} />
@@ -301,7 +279,7 @@ const Footer = () => {
                 }}
               >
                 <button
-                  onClick={() => setShowFAQs(true)}
+                  onClick={scrollToFAQs}
                   style={{
                     background: "none",
                     border: "none",

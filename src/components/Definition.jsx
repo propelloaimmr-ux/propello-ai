@@ -59,6 +59,11 @@ const Definition = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="gradient-text title-heading">What is Propello AI?</h2>
+          <p className="definition-answer">
+            Propello AI is a humanlike conversational voice AI platform that helps businesses run outbound
+            sales calls, handle inbound customer support, and engage customers across Voice, WhatsApp, SMS,
+            and Email &mdash; all from one no-code platform, live in as little as 48 hours.
+          </p>
           <div className="definition-grid">
             {features.map((f, i) => (
               <motion.div
@@ -100,7 +105,15 @@ const Definition = () => {
         .title-heading {
           font-size: 3rem;
           font-weight: 800;
-          margin-bottom: 2.8rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .definition-answer {
+          max-width: 760px;
+          margin: 0 auto 2.8rem;
+          font-size: 1.15rem;
+          line-height: 1.7;
+          color: #444444;
         }
 
         .definition-grid {

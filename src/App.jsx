@@ -10,6 +10,7 @@ import Demo from './components/Demo';
 import Benefits from './components/Benefits';
 import StatsSection from './components/StatsSection';
 import Registered from './components/Registered';
+import FAQSection from './components/FAQSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ResetPassword from './components/ResetPassword';
@@ -58,7 +59,7 @@ const App = () => {
 
       const sections = [
         'home', 'definition', 'services', 'working',
-        'demo', 'benefits', 'stats', 'registered', 'contact'
+        'demo', 'benefits', 'stats', 'registered', 'faqs', 'contact'
       ];
       let current = 'home';
 
@@ -109,6 +110,7 @@ const App = () => {
       <Benefits />
       <StatsSection />
       <Registered />
+      <FAQSection />
       <Contact />
     </main>
   );

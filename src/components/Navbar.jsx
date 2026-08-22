@@ -26,6 +26,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
     { id: "working", label: "How it Works" },
     { id: "benefits", label: "Key Benefits" },
     { id: "stats", label: "Track Record" },
+    { id: "faqs", label: "FAQs" },
     { id: "contact", label: "Contact Us" },
   ];
 
