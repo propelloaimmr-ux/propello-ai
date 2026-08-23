@@ -18,4 +18,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROPELLO_AI }}
           channelId: live
-          projectId: propello-ai
+          projectId: propello-ai-85845
