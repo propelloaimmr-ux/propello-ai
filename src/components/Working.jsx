@@ -1,67 +1,57 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaUserTie, FaRocket, FaChartLine } from "react-icons/fa";
 import { BsArrowRightShort } from "react-icons/bs";
+
+const steps = [
+  { icon: <FaUserTie className="step-icon" />, num: "01", title: "Select Your Agent & Script", desc: "Pick your industry-ready AI agent and share your scripts. We convert them into dynamic conversations using NEPQ and business context." },
+  { icon: <FaRocket className="step-icon" />, num: "02", title: "Go Live Instantly", desc: "Our voice agents are trained and deployed within days." },
+  { icon: <FaChartLine className="step-icon" />, num: "03", title: "Track, Improve, and Scale", desc: "Get access to live dashboards for analytics, sentiment analysis, and CRM-integrated actions to drive performance improvement." },
+];
 
 const Working = () => {
   return (
     <section id="working" className="working-section">
+      <div className="section-backdrop" aria-hidden="true">
+        <span className="backdrop-glow glow-a" />
+        <span className="backdrop-glow glow-b" />
+      </div>
+
       <div className="working-header">
         <h2 className="working-title gradient-text">How It Works</h2>
         <div className="title-gradient-line"></div>
       </div>
 
       <div className="steps-container">
-        <div className="step">
-          <div className="step-icon-container">
-            <div className="step-icon-bg">
-              <FaUserTie className="step-icon" />
-            </div>
-            <div className="step-number">01</div>
-          </div>
-          <h3 className="step-title">Select Your Agent & Script</h3>
-          <p className="step-description">
-            Pick your industry-ready AI agent and share your scripts. We convert them into dynamic conversations using NEPQ and business context.
-          </p>
-        </div>
+        {steps.map((s, i) => (
+          <React.Fragment key={s.num}>
+            <motion.div
+              className="step"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: i * 0.12 }}
+              whileHover={{ y: -8 }}
+            >
+              <div className="step-icon-container">
+                <div className="step-icon-bg">{s.icon}</div>
+                <div className="step-number">{s.num}</div>
+              </div>
+              <h3 className="step-title">{s.title}</h3>
+              <p className="step-description">{s.desc}</p>
+            </motion.div>
 
-        <div className="connector">
-          <BsArrowRightShort className="arrow-icon" />
-          <div className="connector-line"></div>
-        </div>
-
-        <div className="step">
-          <div className="step-icon-container">
-            <div className="step-icon-bg">
-              <FaRocket className="step-icon" />
-            </div>
-            <div className="step-number">02</div>
-          </div>
-          <h3 className="step-title">Go Live Instantly</h3>
-          <p className="step-description">
-            Our voice agents are trained and deployed within days.
-          </p>
-        </div>
-
-        <div className="connector">
-          <BsArrowRightShort className="arrow-icon" />
-          <div className="connector-line"></div>
-        </div>
-
-        <div className="step">
-          <div className="step-icon-container">
-            <div className="step-icon-bg">
-              <FaChartLine className="step-icon" />
-            </div>
-            <div className="step-number">03</div>
-          </div>
-          <h3 className="step-title">Track, Improve, and Scale</h3>
-          <p className="step-description">
-            Get access to live dashboards for analytics, sentiment analysis, and CRM-integrated actions to drive performance improvement.
-          </p>
-        </div>
+            {i < steps.length - 1 && (
+              <div className="connector">
+                <BsArrowRightShort className="arrow-icon" />
+                <div className="connector-line"></div>
+              </div>
+            )}
+          </React.Fragment>
+        ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         .working-section {
           padding: 5rem 1rem;
           font-family: var(--font-body);
@@ -73,6 +63,11 @@ const Working = () => {
           text-align: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .working-header, .steps-container {
+          position: relative;
+          z-index: 1;
         }
 
         .working-header {

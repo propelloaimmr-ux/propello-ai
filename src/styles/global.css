@@ -186,6 +186,52 @@ a:hover {
   color: var(--accent-dark);
 }
 
+/* === Reusable section backdrop (dot-grid + soft glow) === */
+.section-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(230, 61, 0, 0.16) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 50%, black, transparent 75%);
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 50%, black, transparent 75%);
+}
+
+.section-backdrop .backdrop-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(230, 61, 0, 0.14), transparent);
+  filter: blur(6px);
+}
+
+.section-backdrop .backdrop-glow.glow-a {
+  top: -160px;
+  left: -120px;
+  animation: backdropDrift 14s ease-in-out infinite alternate;
+}
+
+.section-backdrop .backdrop-glow.glow-b {
+  bottom: -180px;
+  right: -140px;
+  background: radial-gradient(closest-side, rgba(230, 103, 0, 0.13), transparent);
+  animation: backdropDrift 16s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes backdropDrift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(40px, 30px) scale(1.12); }
+}
+
 /* === Media Queries === */
 @media (max-width: 1024px) {
   .container { padding: 0 16px; }

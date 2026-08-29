@@ -7,56 +7,62 @@ import {
   MdSecurity,
 } from "react-icons/md";
 import { motion } from "framer-motion";
+import VoiceGlobe from "./VoiceGlobe";
 
 const Definition = () => {
   const features = [
     {
-      icon: <MdRecordVoiceOver size={40} />,
+      icon: <MdRecordVoiceOver size={22} />,
       title: "Humanlike Conversations",
       description:
         "Realistic AI that speaks naturally, understands context, and adapts tone.",
     },
     {
-      icon: <MdPsychologyAlt size={40} />,
+      icon: <MdPsychologyAlt size={22} />,
       title: "Sales Psychology Engine",
       description:
         "Built-in NEPQ-style logic to guide buyers with persuasive dialogues.",
     },
     {
-      icon: <MdAnalytics size={40} />,
+      icon: <MdAnalytics size={22} />,
       title: "Smart Call Analytics",
       description:
         "Get real-time data on sentiment, intent, and conversion performance.",
     },
     {
-      icon: <MdConnectWithoutContact size={40} />,
+      icon: <MdConnectWithoutContact size={22} />,
       title: "Omnichannel Presence",
       description:
         "Connect via Voice, WhatsApp, SMS, and Email — all in one platform.",
     },
     {
-      icon: <MdRocketLaunch size={40} />,
+      icon: <MdRocketLaunch size={22} />,
       title: "Instant Deployment",
       description:
         "Go live in 48 hours. No technical setup or coding skills required.",
     },
     {
-      icon: <MdSecurity size={40} />,
+      icon: <MdSecurity size={22} />,
       title: "Enterprise-Grade Security",
       description:
         "Your data is protected with end-to-end encryption and role-based access.",
     },
-    // Optional: Add 3 more for full 3x3
   ];
 
   return (
     <section className="definition-section" id="definition">
+      <div className="section-backdrop" aria-hidden="true">
+        <span className="backdrop-glow glow-a" />
+        <span className="backdrop-glow glow-b" />
+      </div>
+
       <div className="definition-container">
         <motion.div
-          className="main-content"
-          initial={{ x: 0, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+          className="definition-intro"
         >
           <h2 className="gradient-text title-heading">What is Propello AI?</h2>
           <p className="definition-answer">
@@ -64,36 +70,41 @@ const Definition = () => {
             sales calls, handle inbound customer support, and engage customers across Voice, WhatsApp, SMS,
             and Email &mdash; all from one no-code platform, live in as little as 48 hours.
           </p>
-          <div className="definition-grid">
+        </motion.div>
+
+        <div className="definition-split">
+          <div className="definition-visual">
+            <VoiceGlobe size={380} />
+          </div>
+
+          <div className="feature-list">
             {features.map((f, i) => (
               <motion.div
                 key={i}
-                className="feature-card"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 1.04 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                className="feature-row"
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
               >
                 <div className="feature-icon">{f.icon}</div>
-                <h3 className="feature-title gradient-text">{f.title}</h3>
-                <p className="feature-desc">{f.description}</p>
+                <div>
+                  <h3 className="feature-title">{f.title}</h3>
+                  <p className="feature-desc">{f.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .definition-section {
-          padding: 3rem 1rem;
+          position: relative;
+          padding: 5rem 1rem;
           background: #ffffff;
           color: #333333;
-          font-family: 'Segoe UI', sans-serif;
-          text-align: center;
-        }
-
-        .definition-container {
-          max-width: 1200px;
-          margin: 0 auto;
+          overflow: hidden;
         }
 
         .gradient-text {
@@ -103,98 +114,99 @@ const Definition = () => {
         }
 
         .title-heading {
-          font-size: 3rem;
+          font-size: clamp(2rem, 5vw, 3rem);
           font-weight: 800;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.2rem;
+          text-align: center;
+        }
+
+        .definition-container {
+          position: relative;
+          z-index: 1;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .definition-intro {
+          text-align: center;
         }
 
         .definition-answer {
           max-width: 760px;
-          margin: 0 auto 2.8rem;
-          font-size: 1.15rem;
+          margin: 0 auto 3.5rem;
+          font-size: 1.1rem;
           line-height: 1.7;
           color: #444444;
         }
 
-        .definition-grid {
+        .definition-split {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
+          grid-template-columns: 0.9fr 1.1fr;
+          gap: 3rem;
+          align-items: center;
         }
 
-        .feature-card {
-          background: #f9f9ff;
-          border-radius: 16px;
-          padding: 2rem 1.6rem;
-          text-align: center;
-          transition: all 0.3s ease;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-          border: 1px solid #e3e7fd;
-          min-height: 260px;
+        .definition-visual {
           display: flex;
-          flex-direction: column;
           justify-content: center;
         }
 
-        .feature-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 14px 28px rgba(230, 103, 0, 0.15);
+        .feature-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .feature-row {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+          padding: 1rem;
+          border-radius: 12px;
+          transition: background 0.25s ease;
+        }
+
+        .feature-row:hover {
+          background: #faf5f2;
         }
 
         .feature-icon {
-          font-size: 2.5rem;
-          font-weight: bold;
+          flex-shrink: 0;
+          width: 42px;
+          height: 42px;
+          border-radius: 10px;
+          background: #fff1eb;
           color: #E63D00;
-          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .feature-title {
-          font-size: 1.3rem;
+          font-size: 1.05rem;
           font-weight: 600;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.25rem;
+          color: #1c1917;
         }
 
         .feature-desc {
-          font-size: 0.95rem;
-          color: #555555;
-          line-height: 1.5;
+          font-size: 0.92rem;
+          color: #57534e;
+          line-height: 1.55;
+          margin: 0;
         }
 
-        @media (max-width: 1000px) {
-          .definition-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .title-heading {
-            font-size: 2.5rem;
-          }
-        }
-
-        @media (max-width: 600px) {
-          .definition-grid {
+        @media (max-width: 900px) {
+          .definition-split {
             grid-template-columns: 1fr;
-            gap: 1.2rem;
           }
+          .definition-visual {
+            order: -1;
+          }
+        }
 
-          .title-heading {
-            font-size: 2rem;
-          }
-
-          .feature-card {
-            padding: 1.4rem 1rem;
-          }
-
-          .feature-title {
-            font-size: 1.1rem;
-          }
-
-          .feature-desc {
-            font-size: 0.88rem;
-          }
-
-          .feature-icon {
-            font-size: 2rem;
-          }
+        @media (max-width: 480px) {
+          .title-heading { font-size: 1.9rem; }
         }
       `}</style>
     </section>

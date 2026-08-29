@@ -45,9 +45,15 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="services-section">
+      <div className="section-backdrop" aria-hidden="true">
+        <span className="backdrop-glow glow-a" />
+        <span className="backdrop-glow glow-b" />
+      </div>
+
       <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
         className="services-main"
       >
@@ -57,12 +63,14 @@ const Services = () => {
             <motion.div
               key={idx}
               className="service-card"
-              whileTap={{ scale: 1.06 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 250 }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: idx * 0.07 }}
+              whileHover={{ y: -6 }}
             >
               <div className="service-icon">{s.icon}</div>
-              <h3 className="service-title gradient-text">{s.title}</h3>
+              <h3 className="service-title">{s.title}</h3>
               <p className="service-desc">{s.description}</p>
             </motion.div>
           ))}
@@ -74,13 +82,13 @@ const Services = () => {
         </div>
       </motion.div>
 
-      <style jsx>{`
+      <style>{`
         .services-section {
-          min-height: 100vh;
-          padding: 3rem 1rem;
+          position: relative;
+          overflow: hidden;
+          padding: 5rem 1rem;
           background: #ffffff;
           color: #333333;
-          font-family: 'Segoe UI', sans-serif;
           text-align: center;
         }
 
@@ -97,6 +105,8 @@ const Services = () => {
         }
 
         .services-main {
+          position: relative;
+          z-index: 1;
           max-width: 1200px;
           margin: 0 auto;
         }
@@ -108,35 +118,41 @@ const Services = () => {
         }
 
         .service-card {
-          background: #f7f8ff;
+          background: #ffffff;
           border-radius: 16px;
           padding: 2rem 1.6rem;
           text-align: center;
-          transition: all 0.3s ease;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-          border: 1px solid #e3e7fd;
+          transition: box-shadow 0.3s ease;
+          box-shadow: 0 4px 16px rgba(28, 25, 23, 0.06);
+          border: 1px solid #e7e5e4;
           min-height: 260px;
           display: flex;
           flex-direction: column;
+          align-items: center;
           justify-content: center;
         }
 
         .service-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 14px 28px rgba(230, 61, 0, 0.15);
+          box-shadow: 0 16px 32px rgba(230, 61, 0, 0.14);
         }
 
         .service-icon {
-          font-size: 2.5rem;
-          font-weight: bold;
-          color: #E63D00;
-          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #E63D00, #E66700);
+          color: #ffffff;
+          margin-bottom: 1.2rem;
         }
 
         .service-title {
           font-size: 1.3rem;
           font-weight: 600;
           margin-bottom: 0.5rem;
+          color: #1c1917;
         }
 
         .service-desc {
