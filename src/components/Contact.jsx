@@ -43,6 +43,10 @@ const Contact = () => {
         overflow: "hidden"
       }}
     >
+      <div className="section-backdrop" aria-hidden="true">
+        <span className="backdrop-glow glow-a" />
+        <span className="backdrop-glow glow-b" />
+      </div>
       <div
         style={{
           background: "white",

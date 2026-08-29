@@ -55,6 +55,10 @@ const FAQSection = () => {
 
   return (
     <section id="faqs" className="faq-section">
+      <div className="section-backdrop" aria-hidden="true">
+        <span className="backdrop-glow glow-a" />
+        <span className="backdrop-glow glow-b" />
+      </div>
       <div className="faq-container">
         <h2 className="gradient-text title-heading">Frequently Asked Questions</h2>
         <div className="faq-list">
@@ -87,15 +91,18 @@ const FAQSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .faq-section {
+          position: relative;
+          overflow: hidden;
           padding: 3rem 1rem 5rem;
           background: #ffffff;
           color: #333333;
-          font-family: 'Segoe UI', sans-serif;
         }
 
         .faq-container {
+          position: relative;
+          z-index: 1;
           max-width: 900px;
           margin: 0 auto;
         }

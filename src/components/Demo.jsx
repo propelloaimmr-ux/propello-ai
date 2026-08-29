@@ -12,6 +12,7 @@ const Demo = () => {
           max-width: 1300px;
           width: 100%;
           position: relative;
+          z-index: 1;
           border: 2px solid rgba(230, 61, 0, 0.2);
           box-shadow:
             0 0 30px rgba(230, 103, 0, 0.1),
@@ -407,6 +408,10 @@ const Demo = () => {
           overflow: 'hidden',
         }}
       >
+        <div className="section-backdrop" aria-hidden="true">
+          <span className="backdrop-glow glow-a" />
+          <span className="backdrop-glow glow-b" />
+        </div>
         <div className="container">
           <h2>Experience Propello AI in Action</h2>
 

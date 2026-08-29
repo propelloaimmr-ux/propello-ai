@@ -2,6 +2,8 @@ import React from "react";
 
 const styles = {
   container: {
+    position: "relative",
+    overflow: "hidden",
     backgroundColor: "white",
     color: "#333",
     minHeight: "100vh",
@@ -13,6 +15,8 @@ const styles = {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
   content: {
+    position: "relative",
+    zIndex: 1,
     maxWidth: "900px",
     width: "100%",
     textAlign: "center",
@@ -182,6 +186,10 @@ const Registered = () => {
   return (
     <>
       <div style={styles.container}>
+        <div className="section-backdrop" aria-hidden="true">
+          <span className="backdrop-glow glow-a" />
+          <span className="backdrop-glow glow-b" />
+        </div>
         <div style={styles.content}>
           <h2 style={styles.sectionTitle}>Registered With</h2>
           <div style={styles.logoGrid}>
