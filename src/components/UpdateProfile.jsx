@@ -18,12 +18,12 @@ export default function UpdateProfile({ onClose }) {
       margin: "0 auto",
       backgroundColor: "white",
       borderRadius: "12px",
-      boxShadow: "0 4px 12px rgba(255, 109, 0, 0.1)"
+      boxShadow: "0 4px 12px rgba(230, 61, 0, 0.1)"
     }}>
       <h2 style={{ 
         textAlign: "center", 
         marginBottom: "20px",
-        color: "#ff6d00",
+        color: "#e63d00",
         fontSize: "1.8rem"
       }}>
         Update Profile
@@ -33,7 +33,7 @@ export default function UpdateProfile({ onClose }) {
           display: "block",
           marginBottom: "8px",
           fontWeight: "600",
-          color: "#ff6d00"
+          color: "#e63d00"
         }}>New Username</label>
         <input
           type="text"
@@ -44,16 +44,16 @@ export default function UpdateProfile({ onClose }) {
             width: "100%",
             marginBottom: "20px",
             padding: "12px 15px",
-            backgroundColor: "#fff8f0",
+            backgroundColor: "#fff1eb",
             color: "#333",
             borderRadius: "8px",
-            border: "1px solid #ffb74d",
+            border: "1px solid #ff9e4d",
             fontSize: "1rem",
             outline: "none",
             transition: "all 0.3s ease",
             '&:focus': {
-              borderColor: "#ff6d00",
-              boxShadow: "0 0 0 2px rgba(255, 109, 0, 0.2)"
+              borderColor: "#e63d00",
+              boxShadow: "0 0 0 2px rgba(230, 61, 0, 0.2)"
             }
           }}
         />
@@ -61,7 +61,7 @@ export default function UpdateProfile({ onClose }) {
           display: "block",
           marginBottom: "8px",
           fontWeight: "600",
-          color: "#ff6d00"
+          color: "#e63d00"
         }}>New Password</label>
         <input
           type="password"
@@ -72,16 +72,16 @@ export default function UpdateProfile({ onClose }) {
             width: "100%",
             marginBottom: "20px",
             padding: "12px 15px",
-            backgroundColor: "#fff8f0",
+            backgroundColor: "#fff1eb",
             color: "#333",
             borderRadius: "8px",
-            border: "1px solid #ffb74d",
+            border: "1px solid #ff9e4d",
             fontSize: "1rem",
             outline: "none",
             transition: "all 0.3s ease",
             '&:focus': {
-              borderColor: "#ff6d00",
-              boxShadow: "0 0 0 2px rgba(255, 109, 0, 0.2)"
+              borderColor: "#e63d00",
+              boxShadow: "0 0 0 2px rgba(230, 61, 0, 0.2)"
             }
           }}
         />
@@ -90,7 +90,7 @@ export default function UpdateProfile({ onClose }) {
           style={{
             width: "100%",
             padding: "12px",
-            backgroundColor: "#ff6d00",
+            backgroundColor: "#e63d00",
             border: "none",
             borderRadius: "8px",
             fontWeight: "bold",
@@ -99,7 +99,7 @@ export default function UpdateProfile({ onClose }) {
             fontSize: "1rem",
             transition: "all 0.3s ease",
             '&:hover': {
-              backgroundColor: "#ff8500",
+              backgroundColor: "#e66700",
               transform: "translateY(-2px)"
             },
             '&:active': {
@@ -114,7 +114,7 @@ export default function UpdateProfile({ onClose }) {
         onClick={onClose}
         style={{
           marginTop: "15px",
-          color: "#ff6d00",
+          color: "#e63d00",
           textAlign: "center",
           cursor: "pointer",
           fontWeight: "600",

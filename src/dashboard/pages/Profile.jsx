@@ -43,7 +43,7 @@ const ProfilePage = () => {
         <div className="page-header">
           <div className="header-content">
             <RiUserLine className="header-icon" size={isMobile ? 28 : 32} style={{
-              background: 'linear-gradient(135deg, #fc466b, #3f5efb)',
+              background: 'linear-gradient(135deg, #e63d00, #e66700)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }} />
@@ -77,9 +77,9 @@ const ProfilePage = () => {
               onClick={isEditing ? handleSave : handleEditToggle}
               className="primary-btn"
               style={{
-                background: 'linear-gradient(135deg, #fc466b, #3f5efb)',
+                background: 'linear-gradient(135deg, #e63d00, #e66700)',
                 ':hover': {
-                  background: 'linear-gradient(135deg, #e6425f, #3854e6)'
+                  background: 'linear-gradient(135deg, #c23400, #c26b00)'
                 }
               }}
             >
@@ -91,10 +91,10 @@ const ProfilePage = () => {
                 onClick={() => setIsEditing(false)}
                 className="secondary-btn"
                 style={{
-                  color: '#3f5efb',
-                  borderColor: '#3f5efb',
+                  color: '#e66700',
+                  borderColor: '#e66700',
                   ':hover': {
-                    background: 'rgba(63, 94, 251, 0.1)'
+                    background: 'rgba(230, 103, 0, 0.1)'
                   }
                 }}
               >
@@ -145,7 +145,7 @@ const styles = `
   font-size: 2rem;
   margin: 0 0 5px 0;
   font-weight: 700;
-  background: linear-gradient(135deg, #fc466b, #3f5efb);
+  background: linear-gradient(135deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -161,7 +161,7 @@ const styles = `
   border-radius: 16px;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(63, 94, 251, 0.1);
+  border: 1px solid rgba(230, 103, 0, 0.1);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -176,7 +176,7 @@ const styles = `
 
 .form-group label {
   display: block;
-  background: linear-gradient(135deg, #fc466b, #3f5efb);
+  background: linear-gradient(135deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 0.9rem;
@@ -189,8 +189,8 @@ const styles = `
   width: 100%;
   padding: 14px;
   border-radius: 10px;
-  border: 1px solid #3f5efb;
-  background: rgba(63, 94, 251, 0.03);
+  border: 1px solid #e66700;
+  background: rgba(230, 103, 0, 0.03);
   color: #1f2937;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -215,13 +215,13 @@ const styles = `
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(63, 94, 251, 0.3);
+  box-shadow: 0 4px 15px rgba(230, 103, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(63, 94, 251, 0.4);
+  box-shadow: 0 6px 20px rgba(230, 103, 0, 0.4);
 }
 
 .secondary-btn {

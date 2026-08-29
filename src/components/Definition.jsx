@@ -97,7 +97,7 @@ const Definition = () => {
         }
 
         .gradient-text {
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -138,13 +138,13 @@ const Definition = () => {
 
         .feature-card:hover {
           transform: translateY(-6px);
-          box-shadow: 0 14px 28px rgba(63, 94, 251, 0.15);
+          box-shadow: 0 14px 28px rgba(230, 103, 0, 0.15);
         }
 
         .feature-icon {
           font-size: 2.5rem;
           font-weight: bold;
-          color: #FC466B;
+          color: #E63D00;
           margin-bottom: 1rem;
         }
 

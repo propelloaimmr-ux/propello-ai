@@ -29,13 +29,13 @@ const Footer = () => {
     color: "#333",
     padding: "2rem",
     borderRadius: "20px",
-    boxShadow: "0 0 40px rgba(63, 94, 251, 0.2)",
+    boxShadow: "0 0 40px rgba(230, 103, 0, 0.2)",
     zIndex: 1000,
     maxWidth: "90%",
     width: "450px",
     maxHeight: "70vh",
     overflowY: "auto",
-    border: "1px solid rgba(252, 70, 107, 0.2)"
+    border: "1px solid rgba(230, 61, 0, 0.2)"
   };
 
   const overlayStyle = {
@@ -51,7 +51,7 @@ const Footer = () => {
   const backButtonStyle = {
     background: "none",
     border: "none",
-    color: "#3F5EFB",
+    color: "#E66700",
     display: "flex",
     alignItems: "center",
     gap: "0.5rem",
@@ -61,7 +61,7 @@ const Footer = () => {
     fontWeight: "600",
     transition: "all 0.3s ease",
     ':hover': {
-      color: "#FC466B"
+      color: "#E63D00"
     }
   };
 
@@ -70,22 +70,22 @@ const Footer = () => {
     padding: "0.9rem 1rem",
     marginBottom: "1rem",
     background: "#F1F3FF",
-    border: "1px solid rgba(63, 94, 251, 0.3)",
+    border: "1px solid rgba(230, 103, 0, 0.3)",
     borderRadius: "10px",
     color: "#333",
     fontSize: "0.95rem",
     outline: "none",
     transition: "all 0.3s ease",
     ':focus': {
-      borderColor: "#FC466B",
-      boxShadow: "0 0 0 3px rgba(252, 70, 107, 0.1)"
+      borderColor: "#E63D00",
+      boxShadow: "0 0 0 3px rgba(230, 61, 0, 0.1)"
     }
   };
 
   const buttonStyle = {
     width: "100%",
     padding: "0.9rem",
-    background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+    background: "linear-gradient(90deg, #E63D00, #E66700)",
     border: "none",
     borderRadius: "10px",
     color: "white",
@@ -94,10 +94,10 @@ const Footer = () => {
     fontSize: "0.95rem",
     marginTop: "0.5rem",
     transition: "all 0.3s ease",
-    boxShadow: "0 4px 15px rgba(63, 94, 251, 0.3)",
+    boxShadow: "0 4px 15px rgba(230, 103, 0, 0.3)",
     ':hover': {
       transform: "translateY(-2px)",
-      boxShadow: "0 6px 20px rgba(252, 70, 107, 0.4)"
+      boxShadow: "0 6px 20px rgba(230, 61, 0, 0.4)"
     }
   };
 
@@ -128,14 +128,14 @@ const Footer = () => {
             <h2 style={{ 
               marginBottom: "1.5rem", 
               fontSize: "1.5rem", 
-              background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+              background: "linear-gradient(90deg, #E63D00, #E66700)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent"
             }}>
               Privacy Policy
             </h2>
             <div style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
-              <p><strong style={{color: "#3F5EFB"}}>Your Privacy, Our Priority</strong><br />
+              <p><strong style={{color: "#E66700"}}>Your Privacy, Our Priority</strong><br />
                 We do not store sensitive data beyond need. All interactions are encrypted. We comply with Indian privacy laws.</p>
             </div>
           </div>
@@ -152,7 +152,7 @@ const Footer = () => {
             <h2 style={{ 
               marginBottom: "1.5rem", 
               fontSize: "1.5rem", 
-              background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+              background: "linear-gradient(90deg, #E63D00, #E66700)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent"
             }}>
@@ -160,7 +160,7 @@ const Footer = () => {
             </h2>
             <form onSubmit={handleAdminLogin}>
               <div>
-                <label htmlFor="username" style={{ display: "block", marginBottom: "0.5rem", color: "#3F5EFB", fontWeight: "500" }}>Username</label>
+                <label htmlFor="username" style={{ display: "block", marginBottom: "0.5rem", color: "#E66700", fontWeight: "500" }}>Username</label>
                 <input
                   type="text"
                   id="username"
@@ -172,7 +172,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <label htmlFor="password" style={{ display: "block", marginBottom: "0.5rem", color: "#3F5EFB", fontWeight: "500" }}>Password</label>
+                <label htmlFor="password" style={{ display: "block", marginBottom: "0.5rem", color: "#E66700", fontWeight: "500" }}>Password</label>
                 <input
                   type="password"
                   id="password"
@@ -206,11 +206,11 @@ const Footer = () => {
             background: "white",
             borderRadius: "32px",
             padding: "3rem 2rem",
-            boxShadow: "0 20px 50px rgba(252, 70, 107, 0.1)",
+            boxShadow: "0 20px 50px rgba(230, 61, 0, 0.1)",
             color: "#555",
             userSelect: "none",
             boxSizing: "border-box",
-            border: "1px solid rgba(252, 70, 107, 0.1)"
+            border: "1px solid rgba(230, 61, 0, 0.1)"
           }}
         >
           <div
@@ -248,7 +248,7 @@ const Footer = () => {
                 >
                   <span
                     style={{
-                      background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+                      background: "linear-gradient(90deg, #E63D00, #E66700)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                     }}
@@ -283,13 +283,13 @@ const Footer = () => {
                   style={{
                     background: "none",
                     border: "none",
-                    color: "#3F5EFB",
+                    color: "#E66700",
                     cursor: "pointer",
                     fontSize: "0.95rem",
                     fontWeight: "600",
                     transition: "all 0.3s ease",
                     ':hover': {
-                      color: "#FC466B",
+                      color: "#E63D00",
                       textDecoration: "underline"
                     }
                   }}
@@ -301,13 +301,13 @@ const Footer = () => {
                   style={{
                     background: "none",
                     border: "none",
-                    color: "#3F5EFB",
+                    color: "#E66700",
                     cursor: "pointer",
                     fontSize: "0.95rem",
                     fontWeight: "600",
                     transition: "all 0.3s ease",
                     ':hover': {
-                      color: "#FC466B",
+                      color: "#E63D00",
                       textDecoration: "underline"
                     }
                   }}
@@ -319,13 +319,13 @@ const Footer = () => {
                   style={{
                     background: "none",
                     border: "none",
-                    color: "#3F5EFB",
+                    color: "#E66700",
                     cursor: "pointer",
                     fontSize: "0.95rem",
                     fontWeight: "600",
                     transition: "all 0.3s ease",
                     ':hover': {
-                      color: "#FC466B",
+                      color: "#E63D00",
                       textDecoration: "underline"
                     }
                   }}
@@ -352,11 +352,11 @@ const Footer = () => {
                     rel="noreferrer"
                     style={{
                       fontSize: "1.5rem",
-                      color: "#3F5EFB",
+                      color: "#E66700",
                       opacity: 0.8,
                       transition: "all 0.3s ease",
                       ':hover': {
-                        color: "#FC466B",
+                        color: "#E63D00",
                         opacity: 1,
                         transform: "translateY(-3px)"
                       }
@@ -375,22 +375,22 @@ const Footer = () => {
                   fontSize: "0.95rem",
                 }}
               >
-                <p style={{ margin: "0.3rem 0", color: "#3F5EFB" }}>📞 +91 8850477716</p>
-                <p style={{ margin: "0.3rem 0", color: "#3F5EFB" }}>✉️ hello@propelloai.in</p>
+                <p style={{ margin: "0.3rem 0", color: "#E66700" }}>📞 +91 8850477716</p>
+                <p style={{ margin: "0.3rem 0", color: "#E66700" }}>✉️ hello@propelloai.in</p>
               </div>
             </div>
 
             {/* Bottom - Copyright */}
             <div
               style={{
-                borderTop: "1px solid rgba(63, 94, 251, 0.2)",
+                borderTop: "1px solid rgba(230, 103, 0, 0.2)",
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "space-between",
                 alignItems: "center",
                 paddingTop: "1.5rem",
                 fontSize: "0.85rem",
-                color: "#3F5EFB",
+                color: "#E66700",
                 gap: "0.5rem",
               }}
             >

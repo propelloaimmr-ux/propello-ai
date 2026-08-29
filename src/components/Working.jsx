@@ -90,7 +90,7 @@ const Working = () => {
         }
 
         .gradient-text {
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -98,7 +98,7 @@ const Working = () => {
         .title-gradient-line {
           height: 4px;
           width: 120px;
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           margin: 0 auto;
           border-radius: 2px;
         }
@@ -120,7 +120,7 @@ const Working = () => {
           padding: 2.5rem 2rem;
           background: white;
           border-radius: 16px;
-          box-shadow: 0 10px 30px rgba(252, 70, 107, 0.1);
+          box-shadow: 0 10px 30px rgba(230, 61, 0, 0.1);
           transition: all 0.3s ease;
           position: relative;
           z-index: 1;
@@ -131,7 +131,7 @@ const Working = () => {
 
         .step:hover {
           transform: translateY(-8px);
-          box-shadow: 0 15px 40px rgba(252, 70, 107, 0.2);
+          box-shadow: 0 15px 40px rgba(230, 61, 0, 0.2);
         }
 
         .step-icon-container {
@@ -144,14 +144,14 @@ const Working = () => {
         .step-icon-bg {
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, #FC466B, #3F5EFB);
+          background: linear-gradient(135deg, #E63D00, #E66700);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           color: white;
           font-size: 1.8rem;
-          box-shadow: 0 5px 15px rgba(252, 70, 107, 0.3);
+          box-shadow: 0 5px 15px rgba(230, 61, 0, 0.3);
         }
 
         .step-number {
@@ -159,8 +159,8 @@ const Working = () => {
           top: -10px;
           right: -10px;
           background: white;
-          color: #3F5EFB;
-          border: 2px solid #3F5EFB;
+          color: #E66700;
+          border: 2px solid #E66700;
           width: 36px;
           height: 36px;
           border-radius: 50%;
@@ -176,7 +176,7 @@ const Working = () => {
           font-weight: 700;
           margin-bottom: 1rem;
           color: #222;
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-family: var(--font-heading);
@@ -201,7 +201,7 @@ const Working = () => {
 
         .arrow-icon {
           font-size: 2.5rem;
-          color: #3F5EFB;
+          color: #E66700;
           margin-bottom: 0.5rem;
           opacity: 0.7;
         }
@@ -209,7 +209,7 @@ const Working = () => {
         .connector-line {
           width: 60px;
           height: 2px;
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           opacity: 0.3;
         }
 

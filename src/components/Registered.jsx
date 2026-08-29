@@ -18,7 +18,7 @@ const styles = {
     textAlign: "center",
   },
   sectionTitle: {
-    background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+    background: "linear-gradient(90deg, #E63D00, #E66700)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     fontSize: "2rem",
@@ -64,7 +64,7 @@ const styles = {
   divider: {
     width: "90%",
     height: "2px",
-    background: "linear-gradient(90deg, transparent, #fc466b, #3f5efb, transparent)",
+    background: "linear-gradient(90deg, transparent, #e63d00, #e66700, transparent)",
     margin: "3rem auto",
     borderRadius: "3px",
   },
@@ -74,13 +74,13 @@ const styles = {
     left: "20px",
     width: "50px",
     height: "50px",
-    background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+    background: "linear-gradient(135deg, #e63d00, #e66700)",
     color: "white",
     borderRadius: "50%",
     fontSize: "28px",
     fontWeight: "700",
     cursor: "pointer",
-    boxShadow: "0 0 15px rgba(252, 70, 107, 0.7)",
+    boxShadow: "0 0 15px rgba(230, 61, 0, 0.7)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -98,8 +98,8 @@ const styles = {
     color: "#333",
     padding: "1.5rem",
     borderRadius: "12px",
-    boxShadow: "0 0 20px rgba(252, 70, 107, 0.5)",
-    border: "2px solid #fc466b",
+    boxShadow: "0 0 20px rgba(230, 61, 0, 0.5)",
+    border: "2px solid #e63d00",
     overflowY: "auto",
     fontSize: "0.9rem",
     fontWeight: "600",
@@ -110,9 +110,9 @@ const styles = {
     fontWeight: "800",
     fontSize: "1.2rem",
     marginBottom: "1rem",
-    borderBottom: "2px solid #fc466b",
+    borderBottom: "2px solid #e63d00",
     paddingBottom: "6px",
-    color: "#fc466b",
+    color: "#e63d00",
   },
   guideList: {
     paddingLeft: "1.2rem",
@@ -232,7 +232,7 @@ const Registered = () => {
           <h3 id="guideTitle" style={styles.guideTitle}>
             USER GUIDE - HOW TO USE THE BOT
           </h3>
-          <p style={{ color: "#fc466b", fontWeight: "700", marginBottom: "1rem" }}>
+          <p style={{ color: "#e63d00", fontWeight: "700", marginBottom: "1rem" }}>
             GETTING STARTED WITH PROPELLO AI
           </p>
           <ul style={styles.guideList}>
@@ -242,7 +242,7 @@ const Registered = () => {
             <li><strong>GO LIVE:</strong> Your voice assistant starts answering calls immediately.</li>
             <li><strong>TRACK PERFORMANCE:</strong> Use the dashboard to monitor calls and responses.</li>
           </ul>
-          <p style={{ color: "#fc466b", fontWeight: "700", marginTop: "1rem" }}>
+          <p style={{ color: "#e63d00", fontWeight: "700", marginTop: "1rem" }}>
             NEED HELP? OUR ONBOARDING TEAM IS ALWAYS AVAILABLE.
           </p>
         </div>

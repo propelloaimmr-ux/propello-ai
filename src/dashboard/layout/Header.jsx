@@ -59,10 +59,10 @@ const Header = ({ toggleSidebar }) => {
           backgroundColor: "#ffffff",
           padding: "16px",
           borderRadius: "12px",
-          border: "1px solid #fc466b",
+          border: "1px solid #e63d00",
           color: "#333",
           zIndex: 9999,
-          boxShadow: "0 6px 24px rgba(252, 70, 107, 0.1)",
+          boxShadow: "0 6px 24px rgba(230, 61, 0, 0.1)",
         }}
       >
         {children}
@@ -82,7 +82,7 @@ const Header = ({ toggleSidebar }) => {
         alignItems: isMobile ? "flex-start" : "center",
         padding: isHD ? "16px" : "20px",
         backgroundColor: "#ffffff",
-        borderBottom: "2px solid #fc466b",
+        borderBottom: "2px solid #e63d00",
         position: "fixed",
         top: 0,
         left: windowWidth > 1024 ? "250px" : 0,
@@ -125,7 +125,7 @@ const Header = ({ toggleSidebar }) => {
               padding: "5px",
             }}
           >
-            <FiMenu size={24} color="#fc466b" />
+            <FiMenu size={24} color="#e63d00" />
           </button>
         )}
       </div>
@@ -146,7 +146,7 @@ const Header = ({ toggleSidebar }) => {
           onClick={(e) => toggleDropdown("help", e)}
           style={{ cursor: "pointer" }}
         >
-          <FiHelpCircle size={20} color="#fc466b" />
+          <FiHelpCircle size={20} color="#e63d00" />
         </div>
 
         {/* Notifications */}
@@ -154,13 +154,13 @@ const Header = ({ toggleSidebar }) => {
           onClick={(e) => toggleDropdown("notifications", e)}
           style={{ position: "relative", cursor: "pointer" }}
         >
-          <FiBell size={20} color="#fc466b" />
+          <FiBell size={20} color="#e63d00" />
           <div
             style={{
               position: "absolute",
               top: "-5px",
               right: "-5px",
-              backgroundColor: "#fc466b",
+              backgroundColor: "#e63d00",
               borderRadius: "50%",
               width: "16px",
               height: "16px",
@@ -194,7 +194,7 @@ const Header = ({ toggleSidebar }) => {
             alignItems: "center",
             gap: "8px",
             padding: isHD ? "8px 16px" : "10px 20px",
-            background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+            background: "linear-gradient(135deg, #e63d00, #e66700)",
             color: "#fff",
             border: "none",
             borderRadius: "8px",
@@ -216,7 +216,7 @@ const Header = ({ toggleSidebar }) => {
       {/* Dropdowns */}
       {showHelp && (
         <DropdownCard>
-          <strong style={{ color: "#fc466b" }}>What is Propello AI?</strong>
+          <strong style={{ color: "#e63d00" }}>What is Propello AI?</strong>
           <p style={{ fontSize: "13px", marginTop: "10px" }}>
             Propello AI is a voice bot platform to automate and manage calls across your industry campaigns.
           </p>
@@ -225,7 +225,7 @@ const Header = ({ toggleSidebar }) => {
 
       {showNotifications && (
         <DropdownCard>
-          <strong style={{ color: "#fc466b" }}>Notifications</strong>
+          <strong style={{ color: "#e63d00" }}>Notifications</strong>
           <ul style={{ fontSize: "13px", marginTop: "10px", paddingLeft: "16px" }}>
             <li>New lead from Real Estate</li>
             <li>Bot call scheduled for 2PM</li>

@@ -47,9 +47,9 @@ const RecordingsPage = () => {
           gap: '15px',
           marginBottom: '24px'
         }}>
-          <BsMic size={28} color="#fc466b" />
+          <BsMic size={28} color="#e63d00" />
           <h1 style={{
-            background: 'linear-gradient(90deg, #fc466b, #3f5efb)',
+            background: 'linear-gradient(90deg, #e63d00, #e66700)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             fontSize: isMobile ? '22px' : '28px',
@@ -63,15 +63,15 @@ const RecordingsPage = () => {
 
         {/* Info Box */}
         <div style={{
-          backgroundColor: 'rgba(252, 70, 107, 0.05)',
+          backgroundColor: 'rgba(230, 61, 0, 0.05)',
           padding: isMobile ? '16px' : '24px',
           borderRadius: '12px',
-          border: '1px solid rgba(252, 70, 107, 0.15)',
+          border: '1px solid rgba(230, 61, 0, 0.15)',
           marginBottom: '32px',
           boxShadow: '0 6px 20px rgba(0,0,0,0.05)'
         }}>
           <p style={{
-            color: '#fc466b',
+            color: '#e63d00',
             fontSize: isMobile ? '14px' : '15px',
             margin: 0
           }}>
@@ -81,7 +81,7 @@ const RecordingsPage = () => {
 
         {/* Recordings List */}
         <div style={{
-          border: '1px solid rgba(252, 70, 107, 0.15)',
+          border: '1px solid rgba(230, 61, 0, 0.15)',
           borderRadius: '12px',
           padding: isMobile ? '14px' : '20px',
           backgroundColor: '#fff',
@@ -91,7 +91,7 @@ const RecordingsPage = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
               {dummyRecordings.map(recording => (
                 <div key={recording.id} style={{
-                  borderBottom: '1px solid rgba(252, 70, 107, 0.1)',
+                  borderBottom: '1px solid rgba(230, 61, 0, 0.1)',
                   paddingBottom: '16px'
                 }}>
                   <div style={{
@@ -99,7 +99,7 @@ const RecordingsPage = () => {
                     justifyContent: 'space-between',
                     marginBottom: '8px'
                   }}>
-                    <span style={{ fontWeight: '600', color: '#fc466b' }}>{recording.leadName}</span>
+                    <span style={{ fontWeight: '600', color: '#e63d00' }}>{recording.leadName}</span>
                     <span style={{ color: '#666' }}>{recording.date}</span>
                   </div>
                   <div style={{
@@ -116,7 +116,7 @@ const RecordingsPage = () => {
                       style={{
                         background: 'none',
                         border: 'none',
-                        color: '#fc466b',
+                        color: '#e63d00',
                         fontSize: '24px',
                         cursor: 'pointer',
                         display: 'flex',
@@ -145,8 +145,8 @@ const RecordingsPage = () => {
             <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '900px' }}>
               <thead>
                 <tr style={{
-                  backgroundColor: 'rgba(252, 70, 107, 0.05)',
-                  borderBottom: '2px solid rgba(252, 70, 107, 0.2)'
+                  backgroundColor: 'rgba(230, 61, 0, 0.05)',
+                  borderBottom: '2px solid rgba(230, 61, 0, 0.2)'
                 }}>
                   <th style={thStyle}>Lead Name</th>
                   <th style={thStyle}>Campaign</th>
@@ -158,7 +158,7 @@ const RecordingsPage = () => {
               <tbody>
                 {dummyRecordings.map(recording => (
                   <tr key={recording.id} style={{
-                    borderBottom: '1px solid rgba(252, 70, 107, 0.1)',
+                    borderBottom: '1px solid rgba(230, 61, 0, 0.1)',
                   }}>
                     <td style={tdStyle}>{recording.leadName}</td>
                     <td style={tdStyle}>{recording.campaign}</td>
@@ -183,7 +183,7 @@ const RecordingsPage = () => {
 
 const thStyle = {
   padding: '14px',
-  color: '#fc466b',
+  color: '#e63d00',
   textAlign: 'left',
   fontSize: '14px',
   fontWeight: '600',

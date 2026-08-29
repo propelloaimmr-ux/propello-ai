@@ -50,8 +50,8 @@ const Contact = () => {
           borderRadius: "28px",
           maxWidth: "650px",
           width: "100%",
-          boxShadow: "0 20px 50px rgba(252, 70, 107, 0.1)",
-          border: "1px solid rgba(63, 94, 251, 0.2)",
+          boxShadow: "0 20px 50px rgba(230, 61, 0, 0.1)",
+          border: "1px solid rgba(230, 103, 0, 0.2)",
           color: "#333",
           transition: "all 0.3s ease",
           position: "relative",
@@ -66,7 +66,7 @@ const Contact = () => {
           right: "-100px",
           width: "300px",
           height: "300px",
-          background: "radial-gradient(circle, rgba(252, 70, 107, 0.1) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(230, 61, 0, 0.1) 0%, transparent 70%)",
           zIndex: -1
         }}></div>
         <div style={{
@@ -75,14 +75,14 @@ const Contact = () => {
           left: "-100px",
           width: "300px",
           height: "300px",
-          background: "radial-gradient(circle, rgba(63, 94, 251, 0.1) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(230, 103, 0, 0.1) 0%, transparent 70%)",
           zIndex: -1
         }}></div>
 
         <h2
           style={{
             fontSize: "2.8rem",
-            background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+            background: "linear-gradient(90deg, #E63D00, #E66700)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             fontFamily: "var(--font-heading)",
@@ -101,7 +101,7 @@ const Contact = () => {
             transform: "translateX(-50%)",
             width: "100px",
             height: "4px",
-            background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+            background: "linear-gradient(90deg, #E63D00, #E66700)",
             borderRadius: "2px"
           }}></span>
         </h2>
@@ -111,7 +111,7 @@ const Contact = () => {
             <p
               style={{
                 fontSize: "1.4rem",
-                color: "#3F5EFB",
+                color: "#E66700",
                 fontWeight: "600",
                 marginBottom: "1rem"
               }}
@@ -175,18 +175,18 @@ const Contact = () => {
               style={submitBtnStyle}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 8px 25px rgba(252, 70, 107, 0.4)";
+                e.currentTarget.style.boxShadow = "0 8px 25px rgba(230, 61, 0, 0.4)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 5px 20px rgba(63, 94, 251, 0.3)";
+                e.currentTarget.style.boxShadow = "0 5px 20px rgba(230, 103, 0, 0.3)";
               }}
             >
               Send Message
             </button>
             {error && (
               <p style={{
-                color: "#FC466B",
+                color: "#E63D00",
                 textAlign: "center",
                 fontWeight: "500",
                 marginTop: "0.5rem"
@@ -204,7 +204,7 @@ const Contact = () => {
 const inputStyle = {
   padding: "1.1rem 1.2rem",
   borderRadius: "12px",
-  border: "1px solid rgba(63, 94, 251, 0.3)",
+  border: "1px solid rgba(230, 103, 0, 0.3)",
   background: "#F8F9FF",
   color: "#333",
   fontSize: "1rem",
@@ -217,13 +217,13 @@ const inputStyle = {
 const labelStyle = {
   display: "block",
   marginBottom: "0.5rem",
-  color: "#3F5EFB",
+  color: "#E66700",
   fontWeight: "500",
   fontSize: "0.95rem"
 };
 
 const submitBtnStyle = {
-  background: "linear-gradient(to right, #FC466B, #3F5EFB)",
+  background: "linear-gradient(to right, #E63D00, #E66700)",
   padding: "1.2rem",
   borderRadius: "12px",
   border: "none",
@@ -231,7 +231,7 @@ const submitBtnStyle = {
   fontSize: "1.1rem",
   cursor: "pointer",
   color: "white",
-  boxShadow: "0 5px 20px rgba(63, 94, 251, 0.3)",
+  boxShadow: "0 5px 20px rgba(230, 103, 0, 0.3)",
   transition: "all 0.3s ease",
   marginTop: "0.5rem",
   position: "relative",

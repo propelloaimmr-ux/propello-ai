@@ -12,10 +12,10 @@ const Demo = () => {
           max-width: 1300px;
           width: 100%;
           position: relative;
-          border: 2px solid rgba(252, 70, 107, 0.2);
+          border: 2px solid rgba(230, 61, 0, 0.2);
           box-shadow:
-            0 0 30px rgba(63, 94, 251, 0.1),
-            inset 0 0 40px rgba(252, 70, 107, 0.1);
+            0 0 30px rgba(230, 103, 0, 0.1),
+            inset 0 0 40px rgba(230, 61, 0, 0.1);
           font-family: 'Poppins', sans-serif;
           transition: all 0.3s ease;
           overflow: hidden;
@@ -28,7 +28,7 @@ const Demo = () => {
           left: -50%;
           width: 200%;
           height: 200%;
-          background: radial-gradient(circle at center, rgba(252, 70, 107, 0.05) 0%, transparent 70%);
+          background: radial-gradient(circle at center, rgba(230, 61, 0, 0.05) 0%, transparent 70%);
           z-index: 0;
         }
 
@@ -46,10 +46,10 @@ const Demo = () => {
           padding-top: 56.25%;
           background: linear-gradient(135deg, #f8f9fa, #f1f3f5);
           border-radius: 32px;
-          border: 1px solid rgba(252, 70, 107, 0.3);
+          border: 1px solid rgba(230, 61, 0, 0.3);
           box-shadow: 
-            inset 0 0 25px rgba(252, 70, 107, 0.1),
-            0 10px 30px rgba(63, 94, 251, 0.1);
+            inset 0 0 25px rgba(230, 61, 0, 0.1),
+            0 10px 30px rgba(230, 103, 0, 0.1);
           overflow: hidden;
           transition: all 0.3s ease;
         }
@@ -57,8 +57,8 @@ const Demo = () => {
         #demo .video-box:hover {
           transform: translateY(-5px);
           box-shadow: 
-            inset 0 0 25px rgba(252, 70, 107, 0.1),
-            0 15px 40px rgba(63, 94, 251, 0.15);
+            inset 0 0 25px rgba(230, 61, 0, 0.1),
+            0 15px 40px rgba(230, 103, 0, 0.15);
         }
 
         #demo .play-btn {
@@ -69,7 +69,7 @@ const Demo = () => {
           z-index: 2;
           width: 120px;
           height: 120px;
-          background: radial-gradient(circle at center, rgba(252, 70, 107, 0.9) 0%, rgba(63, 94, 251, 0.9) 100%);
+          background: radial-gradient(circle at center, rgba(230, 61, 0, 0.9) 0%, rgba(230, 103, 0, 0.9) 100%);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -79,8 +79,8 @@ const Demo = () => {
           cursor: pointer;
           transition: all 0.3s ease;
           box-shadow:
-            0 0 20px rgba(252, 70, 107, 0.5),
-            0 0 40px rgba(63, 94, 251, 0.5);
+            0 0 20px rgba(230, 61, 0, 0.5),
+            0 0 40px rgba(230, 103, 0, 0.5);
           border: 2px solid white;
         }
 
@@ -88,8 +88,8 @@ const Demo = () => {
         #demo .play-btn:active {
           transform: translate(-50%, -50%) scale(1.1);
           box-shadow:
-            0 0 30px rgba(252, 70, 107, 0.7),
-            0 0 50px rgba(63, 94, 251, 0.7);
+            0 0 30px rgba(230, 61, 0, 0.7),
+            0 0 50px rgba(230, 103, 0, 0.7);
         }
 
         #demo .features {
@@ -105,23 +105,23 @@ const Demo = () => {
           background: white;
           padding: 1.5rem;
           border-radius: 24px;
-          border: 1px solid rgba(252, 70, 107, 0.2);
+          border: 1px solid rgba(230, 61, 0, 0.2);
           box-shadow: 
-            0 5px 20px rgba(63, 94, 251, 0.05),
-            inset 0 0 20px rgba(252, 70, 107, 0.05);
+            0 5px 20px rgba(230, 103, 0, 0.05),
+            inset 0 0 20px rgba(230, 61, 0, 0.05);
           transition: all 0.3s ease;
         }
 
         #demo .feature-item:hover {
           transform: translateY(-5px);
           box-shadow: 
-            0 10px 30px rgba(63, 94, 251, 0.1),
-            inset 0 0 20px rgba(252, 70, 107, 0.1);
+            0 10px 30px rgba(230, 103, 0, 0.1),
+            inset 0 0 20px rgba(230, 61, 0, 0.1);
         }
 
         #demo .feature-icon {
           font-size: 2.5rem;
-          background: linear-gradient(135deg, #FC466B, #3F5EFB);
+          background: linear-gradient(135deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           flex-shrink: 0;
@@ -130,7 +130,7 @@ const Demo = () => {
 
         #demo .feature-text h3 {
           font-size: 1.5rem;
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin: 0 0 0.5rem 0;
@@ -150,7 +150,7 @@ const Demo = () => {
           display: inline-flex;
           align-items: center;
           gap: 1rem;
-          background: linear-gradient(to right, #FC466B, #3F5EFB);
+          background: linear-gradient(to right, #E63D00, #E66700);
           padding: 1.2rem 2.5rem;
           font-weight: 600;
           color: white;
@@ -158,8 +158,8 @@ const Demo = () => {
           border-radius: 999px;
           border: none;
           box-shadow:
-            0 0 20px rgba(252, 70, 107, 0.3),
-            0 0 40px rgba(63, 94, 251, 0.2);
+            0 0 20px rgba(230, 61, 0, 0.3),
+            0 0 40px rgba(230, 103, 0, 0.2);
           transition: all 0.3s ease;
           cursor: pointer;
           font-family: 'Poppins', sans-serif;
@@ -175,7 +175,7 @@ const Demo = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(to right, #3F5EFB, #FC466B);
+          background: linear-gradient(to right, #E66700, #E63D00);
           opacity: 0;
           transition: opacity 0.3s ease;
           z-index: -1;
@@ -185,8 +185,8 @@ const Demo = () => {
         #demo .demo-btn:active {
           transform: translateY(-3px);
           box-shadow:
-            0 0 30px rgba(252, 70, 107, 0.4),
-            0 0 50px rgba(63, 94, 251, 0.3);
+            0 0 30px rgba(230, 61, 0, 0.4),
+            0 0 50px rgba(230, 103, 0, 0.3);
         }
 
         #demo .demo-btn:hover::before {
@@ -196,7 +196,7 @@ const Demo = () => {
         #demo h2 {
           text-align: center;
           font-size: 3.2rem;
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-family: 'Poppins', sans-serif;
@@ -215,7 +215,7 @@ const Demo = () => {
           transform: translateX(-50%);
           width: 120px;
           height: 4px;
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           border-radius: 2px;
         }
 

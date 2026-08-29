@@ -33,7 +33,7 @@ const StatCards = ({ isMobile }) => {
       title: 'Calls Triggered', 
       value: '5,240', 
       change: '+4.1%', 
-      color: '#3f5efb',
+      color: '#e66700',
       icon: <FiBarChart2 size={20} />,
       trend: 'up'
     },
@@ -57,7 +57,7 @@ const StatCards = ({ isMobile }) => {
       title: 'Follow-ups Scheduled', 
       value: '194', 
       change: '+6.7%', 
-      color: '#fc466b',
+      color: '#e63d00',
       icon: <FiClock size={20} />,
       trend: 'up'
     },
@@ -96,13 +96,13 @@ const StatCards = ({ isMobile }) => {
 
 const CallGraphs = ({ isMobile }) => {
   const data = [
-    { day: 'Mon', calls: 842, fill: '#3f5efb' },
-    { day: 'Tue', calls: 1043, fill: '#5a6df5' },
-    { day: 'Wed', calls: 932, fill: '#3f5efb' },
-    { day: 'Thu', calls: 1254, fill: '#5a6df5' },
-    { day: 'Fri', calls: 876, fill: '#3f5efb' },
-    { day: 'Sat', calls: 543, fill: '#5a6df5' },
-    { day: 'Sun', calls: 321, fill: '#3f5efb' },
+    { day: 'Mon', calls: 842, fill: '#e66700' },
+    { day: 'Tue', calls: 1043, fill: '#ff9e4d' },
+    { day: 'Wed', calls: 932, fill: '#e66700' },
+    { day: 'Thu', calls: 1254, fill: '#ff9e4d' },
+    { day: 'Fri', calls: 876, fill: '#e66700' },
+    { day: 'Sat', calls: 543, fill: '#ff9e4d' },
+    { day: 'Sun', calls: 321, fill: '#e66700' },
   ];
 
   const CustomTooltip = ({ active, payload, label }) => {
@@ -280,17 +280,17 @@ const BotPerformance = ({ isMobile }) => {
                 type="monotone" 
                 dataKey="dialed" 
                 name="Dialed Calls" 
-                stroke="#3f5efb" 
+                stroke="#e66700" 
                 strokeWidth={2} 
-                dot={{ r: 4, stroke: '#3f5efb', strokeWidth: 2, fill: '#fff' }} 
+                dot={{ r: 4, stroke: '#e66700', strokeWidth: 2, fill: '#fff' }} 
               />
               <Line 
                 type="monotone" 
                 dataKey="connected" 
                 name="Connected Calls" 
-                stroke="#fc466b" 
+                stroke="#e63d00" 
                 strokeWidth={2} 
-                dot={{ r: 4, stroke: '#fc466b', strokeWidth: 2, fill: '#fff' }} 
+                dot={{ r: 4, stroke: '#e63d00', strokeWidth: 2, fill: '#fff' }} 
               />
             </LineChart>
           </ResponsiveContainer>
@@ -405,7 +405,7 @@ const styles = `
   transform: translateY(-50%);
   height: 24px;
   width: 4px;
-  background: linear-gradient(to bottom, #3f5efb, #fc466b);
+  background: linear-gradient(to bottom, #e66700, #e63d00);
   border-radius: 2px;
 }
 
@@ -544,7 +544,7 @@ const styles = `
 }
 
 .graph-title {
-  color: #3f5efb;
+  color: #e66700;
   font-size: 16px;
   font-weight: 600;
   display: flex;
@@ -553,9 +553,9 @@ const styles = `
 }
 
 .graph-select {
-  background-color: rgba(63, 94, 251, 0.1);
-  color: #3f5efb;
-  border: 1px solid rgba(63, 94, 251, 0.3);
+  background-color: rgba(230, 103, 0, 0.1);
+  color: #e66700;
+  border: 1px solid rgba(230, 103, 0, 0.3);
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 14px;
@@ -565,7 +565,7 @@ const styles = `
 }
 
 .graph-select:hover {
-  background-color: rgba(63, 94, 251, 0.2);
+  background-color: rgba(230, 103, 0, 0.2);
 }
 
 .custom-tooltip {
@@ -577,7 +577,7 @@ const styles = `
 }
 
 .tooltip-label {
-  color: #3f5efb;
+  color: #e66700;
   font-weight: 600;
   margin-bottom: 8px;
   font-size: 14px;
@@ -625,7 +625,7 @@ const styles = `
 }
 
 .stat-item-title {
-  color: #3f5efb;
+  color: #e66700;
   font-size: 14px;
   margin-bottom: 12px;
   font-weight: 600;
@@ -675,7 +675,7 @@ const styles = `
 }
 
 .bot-performance-title {
-  color: #3f5efb;
+  color: #e66700;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -733,7 +733,7 @@ const styles = `
 }
 
 .trend-title {
-  color: #3f5efb;
+  color: #e66700;
   font-size: 16px;
   font-weight: 600;
   display: flex;
@@ -742,9 +742,9 @@ const styles = `
 }
 
 .trend-select {
-  background-color: rgba(63, 94, 251, 0.1);
-  color: #3f5efb;
-  border: 1px solid rgba(63, 94, 251, 0.3);
+  background-color: rgba(230, 103, 0, 0.1);
+  color: #e66700;
+  border: 1px solid rgba(230, 103, 0, 0.3);
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 14px;
@@ -754,7 +754,7 @@ const styles = `
 }
 
 .trend-select:hover {
-  background-color: rgba(63, 94, 251, 0.2);
+  background-color: rgba(230, 103, 0, 0.2);
 }
 
 .trend-chart-container {
@@ -783,15 +783,15 @@ const styles = `
 }
 
 .table-title {
-  color: #3f5efb;
+  color: #e66700;
   font-size: 16px;
   font-weight: 600;
 }
 
 .view-all-btn {
-  background-color: rgba(63, 94, 251, 0.1);
-  color: #3f5efb;
-  border: 1px solid rgba(63, 94, 251, 0.3);
+  background-color: rgba(230, 103, 0, 0.1);
+  color: #e66700;
+  border: 1px solid rgba(230, 103, 0, 0.3);
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 14px;
@@ -803,7 +803,7 @@ const styles = `
 }
 
 .view-all-btn:hover {
-  background-color: rgba(63, 94, 251, 0.2);
+  background-color: rgba(230, 103, 0, 0.2);
 }
 
 .table-scroll-container {
@@ -846,7 +846,7 @@ const styles = `
 .action-btn {
   background-color: transparent;
   border: none;
-  color: #3f5efb;
+  color: #e66700;
   cursor: pointer;
   font-size: 16px;
   padding: 6px;
@@ -858,7 +858,7 @@ const styles = `
 }
 
 .action-btn:hover {
-  background-color: rgba(63, 94, 251, 0.1);
+  background-color: rgba(230, 103, 0, 0.1);
   transform: scale(1.1);
 }
 

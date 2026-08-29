@@ -148,38 +148,14 @@ const App = () => {
                 width: '80px',
                 height: '80px',
                 borderRadius: '50%',
-                border: '5px solid rgba(138, 109, 255, 0.3)',
-                borderTopColor: '#8a6dff',
+                border: '5px solid rgba(230, 61, 0, 0.3)',
+                borderTopColor: '#e63d00',
                 animation: 'spin 1s linear infinite',
               }}
             />
           </motion.div>
         )}
       </AnimatePresence>
-
-      {!isResetPage && (
-        <div className="stars-container">
-          {Array.from({ length: 200 }).map((_, i) => {
-            const size = Math.random() > 0.9 ? 4 : Math.random() > 0.7 ? 3 : 2;
-            return (
-              <div
-                key={i}
-                className="stars"
-                style={{
-                  top: `${Math.random() * 100}vh`,
-                  left: `${Math.random() * 100}vw`,
-                  animationDelay: `${Math.random() * 90}s, ${Math.random() * 2.5}s`,
-                  animationDuration: `${60 + Math.random() * 30}s, ${1 + Math.random() * 2}s`,
-                  opacity: 0.7 + Math.random() * 0.3,
-                  width: `${size}px`,
-                  height: `${size}px`,
-                  filter: 'drop-shadow(0 0 4px white)',
-                }}
-              />
-            );
-          })}
-        </div>
-      )}
 
       {!isResetPage && (
         <Navbar
@@ -231,8 +207,8 @@ const App = () => {
                 borderRadius: '24px',
                 padding: '2rem',
                 color: 'white',
-                boxShadow: '0 0 40px rgba(138, 109, 255, 0.4)',
-                border: '1px solid rgba(138, 109, 255, 0.3)',
+                boxShadow: '0 0 40px rgba(230, 61, 0, 0.4)',
+                border: '1px solid rgba(230, 61, 0, 0.3)',
                 position: 'relative',
               }}
             >
@@ -251,7 +227,7 @@ const App = () => {
                   style={{
                     padding: '12px',
                     borderRadius: '8px',
-                    background: 'linear-gradient(135deg, #8a6dff 0%, #6a5acd 100%)',
+                    background: 'linear-gradient(135deg, #e63d00 0%, #c23400 100%)',
                     color: 'white',
                     border: 'none',
                     cursor: 'pointer',
@@ -272,7 +248,7 @@ const App = () => {
                   style={{
                     padding: '12px',
                     borderRadius: '8px',
-                    background: 'linear-gradient(135deg, #6a5acd 0%, #483d8b 100%)',
+                    background: 'linear-gradient(135deg, #c23400 0%, #802200 100%)',
                     color: 'white',
                     border: 'none',
                     cursor: 'pointer',

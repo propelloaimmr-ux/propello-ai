@@ -153,12 +153,12 @@ export default function Navbar({ activeSection, scrolled, user }) {
       fontWeight: "500",
       position: "relative",
       '&:hover': {
-        color: "#fc466b",
+        color: "#e63d00",
       },
     },
     activeBtn: {
       fontWeight: "600",
-      background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+      background: "linear-gradient(135deg, #e63d00, #e66700)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
@@ -169,7 +169,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
         left: "0",
         width: "100%",
         height: "3px",
-        background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+        background: "linear-gradient(135deg, #e63d00, #e66700)",
       },
     },
     authButtons: {
@@ -178,11 +178,11 @@ export default function Navbar({ activeSection, scrolled, user }) {
       gap: "15px",
     },
     signInBtn: {
-      background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+      background: "linear-gradient(135deg, #e63d00, #e66700)",
       color: "white",
       border: "none",
       padding: "14px 30px",
-      borderRadius: "30px",
+      borderRadius: "10px",
       cursor: "pointer",
       fontWeight: "600",
       fontSize: "18px",
@@ -202,10 +202,10 @@ export default function Navbar({ activeSection, scrolled, user }) {
       alignItems: "center",
       cursor: "pointer",
       fontSize: "30px",
-      color: "#fc466b",
+      color: "#e63d00",
       zIndex: 9999,
       padding: "8px",
-      background: "rgba(252, 70, 107, 0.1)",
+      background: "rgba(230, 61, 0, 0.1)",
       borderRadius: "50%",
     },
     mobileMenu: {
@@ -236,16 +236,16 @@ export default function Navbar({ activeSection, scrolled, user }) {
       textAlign: "left",
       fontWeight: "500",
       '&:hover': {
-        color: "#fc466b",
+        color: "#e63d00",
       },
     },
     mobileActiveBtn: {
       fontWeight: "600",
-      background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+      background: "linear-gradient(135deg, #e63d00, #e66700)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
-      borderLeft: "4px solid #fc466b",
+      borderLeft: "4px solid #e63d00",
     },
     modalOverlay: {
       position: "fixed",
@@ -264,7 +264,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
       padding: "30px",
       borderRadius: "15px",
       width: isMobile ? "90%" : "420px",
-      boxShadow: "0 5px 25px rgba(252, 70, 107, 0.3)",
+      boxShadow: "0 5px 25px rgba(230, 61, 0, 0.3)",
       color: "#333",
       fontFamily: "Inter, sans-serif",
       fontWeight: 500,
@@ -289,15 +289,15 @@ export default function Navbar({ activeSection, scrolled, user }) {
       outline: "none",
       transition: "border 0.3s ease",
       '&:focus': {
-        borderColor: "#fc466b",
-        boxShadow: "0 0 0 2px rgba(252, 70, 107, 0.2)",
+        borderColor: "#e63d00",
+        boxShadow: "0 0 0 2px rgba(230, 61, 0, 0.2)",
       },
     },
     modalBtn: {
-      background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+      background: "linear-gradient(135deg, #e63d00, #e66700)",
       border: "none",
       padding: "14px 20px",
-      borderRadius: "30px",
+      borderRadius: "10px",
       color: "white",
       fontWeight: "600",
       cursor: "pointer",
@@ -314,7 +314,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
       },
     },
     switchText: {
-      color: "#fc466b",
+      color: "#e63d00",
       cursor: "pointer",
       marginTop: "15px",
       textAlign: "center",
@@ -327,7 +327,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
       },
     },
     forgotPassword: {
-      color: "#fc466b",
+      color: "#e63d00",
       cursor: "pointer",
       marginTop: "10px",
       textAlign: "center",
@@ -336,7 +336,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
       fontSize: "15px",
       transition: "all 0.2s ease",
       '&:hover': {
-        color: "#3f5efb",
+        color: "#e66700",
         textDecoration: "underline",
       },
     },
@@ -345,9 +345,9 @@ export default function Navbar({ activeSection, scrolled, user }) {
       top: '100%',
       right: 0,
       marginTop: '10px',
-      background: "#fc466b",
+      background: "#e63d00",
       color: 'white',
-      boxShadow: '0 4px 20px rgba(252, 70, 107, 0.3)',
+      boxShadow: '0 4px 20px rgba(230, 61, 0, 0.3)',
       padding: '12px 16px',
       borderRadius: '10px',
       width: isMobile ? '180px' : '220px',
@@ -363,7 +363,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
       height: '0',
       borderLeft: '10px solid transparent',
       borderRight: '10px solid transparent',
-      borderBottom: '10px solid #fc466b',
+      borderBottom: '10px solid #e63d00',
     },
     tooltipHeader: {
       display: 'flex',
@@ -390,14 +390,14 @@ export default function Navbar({ activeSection, scrolled, user }) {
       borderRadius: '20px',
       transition: 'all 0.3s ease',
       '&:hover': {
-        background: 'rgba(252, 70, 107, 0.1)'
+        background: 'rgba(230, 61, 0, 0.1)'
       }
     },
     userAvatar: {
       width: '36px',
       height: '36px',
       borderRadius: '50%',
-      background: 'linear-gradient(135deg, #fc466b, #3f5efb)',
+      background: 'linear-gradient(135deg, #e63d00, #e66700)',
       color: 'white',
       display: 'flex',
       alignItems: 'center',
@@ -560,7 +560,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
                     style={{ 
                       textAlign: "center", 
                       marginBottom: "20px",
-                      background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+                      background: "linear-gradient(135deg, #e63d00, #e66700)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       fontSize: "26px",
@@ -682,7 +682,7 @@ export default function Navbar({ activeSection, scrolled, user }) {
       </div>
 
       {/* Global styles */}
-      <style jsx global>{`
+      <style>{`
         @keyframes slideDown {
           from { transform: translateY(-20px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }

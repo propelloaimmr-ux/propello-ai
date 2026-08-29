@@ -18,7 +18,7 @@ const ScriptsPage = () => {
 
         {/* Page Title */}
         <div className="scripts-header">
-          <BsFileText size={28} color="#3f5efb" />
+          <BsFileText size={28} color="#e66700" />
           <h1 className="gradient-heading">Call Scripts</h1>
         </div>
 
@@ -80,7 +80,7 @@ const styles = `
 .gradient-heading {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  background: linear-gradient(135deg, #e66700, #e63d00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
@@ -90,17 +90,17 @@ const styles = `
 .gradient-heading-small {
   font-size: 16px;
   font-weight: 600;
-  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  background: linear-gradient(135deg, #e66700, #e63d00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 6px 0;
 }
 
 .gradient-box {
-  background: linear-gradient(135deg, rgba(63, 94, 251, 0.05), rgba(252, 70, 107, 0.05));
+  background: linear-gradient(135deg, rgba(230, 103, 0, 0.05), rgba(230, 61, 0, 0.05));
   padding: 30px;
   border-radius: 12px;
-  border: 1px solid rgba(63, 94, 251, 0.2);
+  border: 1px solid rgba(230, 103, 0, 0.2);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 40px;
 }
@@ -108,7 +108,7 @@ const styles = `
 .gradient-text {
   font-size: 16px;
   font-weight: 500;
-  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  background: linear-gradient(135deg, #e66700, #e63d00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
@@ -117,7 +117,7 @@ const styles = `
 
 .scripts-card {
   background-color: #fff;
-  border: 1px solid rgba(63, 94, 251, 0.15);
+  border: 1px solid rgba(230, 103, 0, 0.15);
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
@@ -136,14 +136,14 @@ const styles = `
   justify-content: space-between;
   align-items: center;
   padding: 18px;
-  background: linear-gradient(135deg, rgba(63, 94, 251, 0.03), rgba(252, 70, 107, 0.03));
+  background: linear-gradient(135deg, rgba(230, 103, 0, 0.03), rgba(230, 61, 0, 0.03));
   border-radius: 10px;
-  border: 1px solid rgba(63, 94, 251, 0.1);
+  border: 1px solid rgba(230, 103, 0, 0.1);
   transition: all 0.2s ease;
 }
 
 .script-item:hover {
-  border-color: rgba(63, 94, 251, 0.3);
+  border-color: rgba(230, 103, 0, 0.3);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -154,7 +154,7 @@ const styles = `
 }
 
 .gradient-download {
-  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  background: linear-gradient(135deg, #e66700, #e63d00);
   color: #fff;
   padding: 8px 16px;
   border-radius: 6px;

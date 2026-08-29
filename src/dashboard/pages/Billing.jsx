@@ -24,7 +24,7 @@ const Billings = () => {
     <div className="premium-container">
       <div className="step-content">
         <div className="page-header">
-          <RiWalletLine size={isMobile ? 28 : 32} color="#fc466b" />
+          <RiWalletLine size={isMobile ? 28 : 32} color="#e63d00" />
           <h1>Billing & Payments</h1>
           <p>Manage your subscription and payment methods</p>
         </div>
@@ -128,7 +128,7 @@ const styles = `
   font-size: 2rem;
   font-weight: 700;
   margin: 15px 0 10px;
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -144,12 +144,12 @@ const styles = `
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(252, 70, 107, 0.1);
+  border: 1px solid rgba(230, 61, 0, 0.1);
   margin-bottom: 30px;
 }
 
 .billing-card h3 {
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 25px;
@@ -182,14 +182,14 @@ const styles = `
 }
 
 .status-active {
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
 }
 
 .status-paid {
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -212,12 +212,12 @@ table {
 th {
   text-align: left;
   padding: 12px 16px;
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 0.9rem;
   font-weight: 600;
-  border-bottom: 2px solid rgba(252, 70, 107, 0.2);
+  border-bottom: 2px solid rgba(230, 61, 0, 0.2);
 }
 
 td {
@@ -228,7 +228,7 @@ td {
 }
 
 tr:hover {
-  background-color: rgba(252, 70, 107, 0.03);
+  background-color: rgba(230, 61, 0, 0.03);
 }
 
 .payment-method {
@@ -240,7 +240,7 @@ tr:hover {
 }
 
 .primary-btn {
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   color: white;
   border: none;
   padding: 14px 30px;
@@ -249,19 +249,19 @@ tr:hover {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(252, 70, 107, 0.3);
+  box-shadow: 0 4px 15px rgba(230, 61, 0, 0.3);
 }
 
 .primary-btn:hover {
-  background: linear-gradient(90deg, #e14269, #2d4bd8);
+  background: linear-gradient(90deg, #c23400, #c26b00);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(252, 70, 107, 0.4);
+  box-shadow: 0 6px 20px rgba(230, 61, 0, 0.4);
 }
 
 .secondary-btn {
   background: white;
-  color: #fc466b;
-  border: 1px solid #fc466b;
+  color: #e63d00;
+  border: 1px solid #e63d00;
   padding: 14px 30px;
   border-radius: 10px;
   font-weight: 600;
@@ -271,7 +271,7 @@ tr:hover {
 }
 
 .secondary-btn:hover {
-  background: rgba(252, 70, 107, 0.1);
+  background: rgba(230, 61, 0, 0.1);
 }
 
 /* Responsive */

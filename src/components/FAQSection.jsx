@@ -101,7 +101,7 @@ const FAQSection = () => {
         }
 
         .gradient-text {
-          background: linear-gradient(90deg, #FC466B, #3F5EFB);
+          background: linear-gradient(90deg, #E63D00, #E66700);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -128,7 +128,7 @@ const FAQSection = () => {
         }
 
         .faq-item.open {
-          box-shadow: 0 10px 24px rgba(63, 94, 251, 0.12);
+          box-shadow: 0 10px 24px rgba(230, 103, 0, 0.12);
         }
 
         .faq-item h3 {
@@ -155,7 +155,7 @@ const FAQSection = () => {
         .faq-icon {
           flex-shrink: 0;
           font-size: 1.6rem;
-          color: #FC466B;
+          color: #E63D00;
           transition: transform 0.3s ease;
         }
 

@@ -56,17 +56,17 @@ const Hero = ({ user }) => {
             zIndex: 1,
             background: "#ffffff",
             padding: "4rem 5rem 4rem 6rem",
-            borderRadius: "32px",
+            borderRadius: "20px",
             maxWidth: "1100px",
             width: "100%",
-            boxShadow: "0 20px 60px rgba(252, 70, 107, 0.2)",
+            boxShadow: "0 8px 30px rgba(28, 25, 23, 0.06)",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
             gap: "4rem",
             flexWrap: "wrap",
             minHeight: "420px",
-            border: "1px solid rgba(252, 70, 107, 0.2)"
+            border: "1px solid #e7e5e4"
           }}
           className="hero-container"
         >
@@ -82,14 +82,14 @@ const Hero = ({ user }) => {
                 textTransform: "uppercase",
                 letterSpacing: "2.5px",
                 fontSize: "1.1rem",
-                background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+                background: "linear-gradient(90deg, #E63D00, #E66700)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 fontFamily: "var(--font-heading)",
                 maxWidth: "max-content",
                 padding: "0.4rem 1.2rem",
                 borderRadius: "999px",
-                backgroundColor: "rgba(252, 70, 107, 0.1)",
+                backgroundColor: "rgba(230, 61, 0, 0.1)",
               }}
               className="hero-badge"
             >
@@ -102,7 +102,7 @@ const Hero = ({ user }) => {
                 lineHeight: 1.1,
                 marginBottom: "1.5rem",
                 fontFamily: "var(--font-heading)",
-                background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+                background: "linear-gradient(90deg, #E63D00, #E66700)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 userSelect: "none",
@@ -142,20 +142,20 @@ const Hero = ({ user }) => {
             >
               <button
                 style={{
-                  background: "linear-gradient(135deg, #FC466B, #3F5EFB)",
+                  background: "#E63D00",
                   color: "#fff",
                   border: "none",
-                  borderRadius: "50px",
+                  borderRadius: "10px",
                   padding: "1.2rem 3rem",
                   fontWeight: "600",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: "0.75rem",
-                  transition: "transform 0.3s ease",
+                  transition: "transform 0.3s ease, background 0.3s ease",
                   userSelect: "none",
                   whiteSpace: "nowrap",
-                  boxShadow: "0 0 25px rgba(252, 70, 107, 0.4)",
+                  boxShadow: "0 4px 14px rgba(230, 61, 0, 0.25)",
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.transform = "scale(1.05)")
@@ -171,9 +171,9 @@ const Hero = ({ user }) => {
               <button
                 style={{
                   background: "transparent",
-                  border: "2px solid #FC466B",
-                  color: "#FC466B",
-                  borderRadius: "50px",
+                  border: "2px solid #E63D00",
+                  color: "#E63D00",
+                  borderRadius: "10px",
                   padding: "1.2rem 3rem",
                   fontWeight: "600",
                   cursor: "pointer",
@@ -185,12 +185,12 @@ const Hero = ({ user }) => {
                   transition: "background-color 0.3s ease, color 0.3s",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(252, 70, 107, 0.1)";
-                  e.currentTarget.style.color = "#3F5EFB";
+                  e.currentTarget.style.backgroundColor = "rgba(230, 61, 0, 0.1)";
+                  e.currentTarget.style.color = "#E66700";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.color = "#FC466B";
+                  e.currentTarget.style.color = "#E63D00";
                 }}
                 className="hero-button secondary"
                 onClick={() => setShowModal(true)}
@@ -228,7 +228,7 @@ const Hero = ({ user }) => {
             position: relative;
             width: 220px;
             height: 220px;
-            color: #FC466B;
+            color: #E63D00;
             user-select: none;
           }
           .mic::before, .mic::after {
@@ -239,17 +239,17 @@ const Hero = ({ user }) => {
             transform: translate(-50%, -50%);
             border-radius: 100%;
             z-index: 2;
-            box-shadow: 0 0 20px 15px #FC466B;
+            box-shadow: 0 0 20px 15px #E63D00;
           }
           .mic::before {
             width: 220px;
             height: 220px;
-            background-color: #FFF0F5;
+            background-color: #FFF1EB;
           }
           .mic::after {
             width: 140px;
             height: 140px;
-            background-color: #FFE5F1;
+            background-color: #FFE0CC;
             animation: circle-size 0.8s linear infinite alternate;
           }
           .mic-icon {
@@ -267,14 +267,14 @@ const Hero = ({ user }) => {
             border-top: 0;
             margin-top: 20px;
             z-index: 3;
-            border-color: #3F5EFB;
+            border-color: #E66700;
           }
           .mic-icon::before, .mic-icon::after {
             content: "";
             display: block;
             box-sizing: border-box;
             position: absolute;
-            border-color: #3F5EFB;
+            border-color: #E66700;
           }
           .mic-icon::before {
             width: 2px;
@@ -282,7 +282,7 @@ const Hero = ({ user }) => {
             top: calc(100% + 1px);
             left: 50%;
             transform: translate(-50%, 0);
-            background-color: #3F5EFB;
+            background-color: #E66700;
           }
           .mic-icon::after {
             border: 2px solid;
@@ -302,9 +302,9 @@ const Hero = ({ user }) => {
             border-radius: 100%;
             z-index: 1;
             box-shadow:
-              0 0 50px 5px #FC466B,
-              0 0 100px 20px #3F5EFB,
-              0 0 150px 25px #FC466B;
+              0 0 50px 5px #E63D00,
+              0 0 100px 20px #E66700,
+              0 0 150px 25px #E63D00;
             animation: shadow-rotate 2s linear infinite;
             transform-origin: center;
             transform: translate(-50%, -50%);
@@ -313,12 +313,12 @@ const Hero = ({ user }) => {
             from {
               width: 140px;
               height: 140px;
-              box-shadow: 0 0 15px 15px #FC466B;
+              box-shadow: 0 0 15px 15px #E63D00;
             }
             to {
               width: 120px;
               height: 120px;
-              box-shadow: 0 0 20px 25px #3F5EFB;
+              box-shadow: 0 0 20px 25px #E66700;
             }
           }
           @keyframes shadow-rotate {
@@ -438,7 +438,7 @@ const Hero = ({ user }) => {
           @media (max-width: 480px) {
             .hero-container {
               padding: 1.5rem 1.5rem !important;
-              border-radius: 24px !important;
+              border-radius: 16px !important;
             }
             
             .hero-title {
@@ -498,15 +498,15 @@ const Hero = ({ user }) => {
               borderRadius: "16px",
               width: "95%",
               maxWidth: "500px",
-              boxShadow: "0 4px 30px rgba(252, 70, 107, 0.2)",
+              boxShadow: "0 4px 30px rgba(230, 61, 0, 0.2)",
               textAlign: "center",
-              border: "1px solid rgba(252, 70, 107, 0.3)"
+              border: "1px solid rgba(230, 61, 0, 0.3)"
             }}
             className="modal-container"
           >
             <h2 style={{ 
               marginBottom: "1.5rem", 
-              color: "#3F5EFB",
+              color: "#E66700",
               fontSize: "1.8rem",
               fontFamily: "var(--font-heading)"
             }}>
@@ -521,7 +521,7 @@ const Hero = ({ user }) => {
               style={{
                 ...inputStyle,
                 backgroundColor: "rgba(255,255,255,0.9)",
-                border: "1px solid rgba(252, 70, 107, 0.3)",
+                border: "1px solid rgba(230, 61, 0, 0.3)",
                 color: "#333"
               }}
             />
@@ -534,7 +534,7 @@ const Hero = ({ user }) => {
               style={{
                 ...inputStyle,
                 backgroundColor: "rgba(255,255,255,0.9)",
-                border: "1px solid rgba(252, 70, 107, 0.3)",
+                border: "1px solid rgba(230, 61, 0, 0.3)",
                 color: "#333"
               }}
             />
@@ -547,7 +547,7 @@ const Hero = ({ user }) => {
               style={{
                 ...inputStyle,
                 backgroundColor: "rgba(255,255,255,0.9)",
-                border: "1px solid rgba(252, 70, 107, 0.3)",
+                border: "1px solid rgba(230, 61, 0, 0.3)",
                 color: "#333"
               }}
             />
@@ -560,13 +560,13 @@ const Hero = ({ user }) => {
                 ...inputStyle, 
                 height: "80px",
                 backgroundColor: "rgba(255,255,255,0.9)",
-                border: "1px solid rgba(252, 70, 107, 0.3)",
+                border: "1px solid rgba(230, 61, 0, 0.3)",
                 color: "#333"
               }}
             />
             <p
               style={{
-                color: "#FC466B",
+                color: "#E63D00",
                 marginTop: "1rem",
                 fontSize: "0.9rem",
                 fontStyle: "italic"
@@ -579,16 +579,16 @@ const Hero = ({ user }) => {
                 onClick={closeModal}
                 style={{
                   background: "transparent",
-                  color: "#FC466B",
+                  color: "#E63D00",
                   padding: "0.8rem 1.5rem",
-                  border: "2px solid #FC466B",
+                  border: "2px solid #E63D00",
                   borderRadius: "8px",
                   fontWeight: "600",
                   cursor: "pointer",
                   transition: "all 0.3s ease"
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(252, 70, 107, 0.1)";
+                  e.currentTarget.style.backgroundColor = "rgba(230, 61, 0, 0.1)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "transparent";
@@ -598,7 +598,7 @@ const Hero = ({ user }) => {
               </button>
               <button
                 style={{
-                  background: "linear-gradient(135deg, #FC466B, #3F5EFB)",
+                  background: "linear-gradient(135deg, #E63D00, #E66700)",
                   color: "#fff",
                   padding: "0.8rem 1.5rem",
                   border: "none",

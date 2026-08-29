@@ -8,25 +8,25 @@ import {
 
 const benefits = [
   {
-    icon: <MdRecordVoiceOver size={40} style={{ color: "#FC466B" }} />,
+    icon: <MdRecordVoiceOver size={40} style={{ color: "#E63D00" }} />,
     title: "Natural Conversations",
     description:
       "Engage users with humanlike tone, emotional nuance, and fluent multilingual support.",
   },
   {
-    icon: <MdTrendingUp size={40} style={{ color: "#FC466B" }} />,
+    icon: <MdTrendingUp size={40} style={{ color: "#E63D00" }} />,
     title: "Boost Sales Faster",
     description:
       "Use NEPQ-style scripting and AI-driven follow-ups to close more leads at scale.",
   },
   {
-    icon: <MdCloudDone size={40} style={{ color: "#FC466B" }} />,
+    icon: <MdCloudDone size={40} style={{ color: "#E63D00" }} />,
     title: "Scale Without Limits",
     description:
       "Run thousands of voice interactions daily without increasing headcount or effort.",
   },
   {
-    icon: <MdIntegrationInstructions size={40} style={{ color: "#FC466B" }} />,
+    icon: <MdIntegrationInstructions size={40} style={{ color: "#E63D00" }} />,
     title: "Seamless Integration",
     description:
       "Instant setup with CRMs, helpdesks, and tools—no developer time required.",
@@ -52,7 +52,7 @@ const Benefits = () => {
           fontSize: "clamp(2.2rem, 5vw, 3rem)",
           fontWeight: 800,
           fontFamily: "'Segoe UI', sans-serif",
-          background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+          background: "linear-gradient(90deg, #E63D00, #E66700)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           marginBottom: "2.5rem",
@@ -73,8 +73,8 @@ const Benefits = () => {
           borderRadius: "16px",
           width: "100%",
           maxWidth: "1200px",
-          boxShadow: "0 0 6px #3F5EFB55, inset 0 0 4px #FC466B55",
-          border: "1px solid #FC466B33",
+          boxShadow: "0 0 6px #E6670055, inset 0 0 4px #E63D0055",
+          border: "1px solid #E63D0033",
           transition: "all 0.3s ease",
           boxSizing: "border-box",
         }}
@@ -91,8 +91,8 @@ const Benefits = () => {
               key={index}
               style={{
                 backgroundColor: "white",
-                border: "1px solid #FC466B22",
-                boxShadow: "0 0 6px #FC466B33, inset 0 0 3px #3F5EFB33",
+                border: "1px solid #E63D0022",
+                boxShadow: "0 0 6px #E63D0033, inset 0 0 3px #E6670033",
                 padding: "clamp(1.2rem, 2vw, 1.8rem)",
                 borderRadius: "12px",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -105,12 +105,12 @@ const Benefits = () => {
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.03)";
                 e.currentTarget.style.boxShadow =
-                  "0 0 10px #FC466B88, 0 0 14px #3F5EFB88, inset 0 0 6px #3F5EFB88";
+                  "0 0 10px #E63D0088, 0 0 14px #E6670088, inset 0 0 6px #E6670088";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "scale(1)";
                 e.currentTarget.style.boxShadow =
-                  "0 0 6px #FC466B33, inset 0 0 3px #3F5EFB33";
+                  "0 0 6px #E63D0033, inset 0 0 3px #E6670033";
               }}
             >
               <div style={{ marginBottom: "1rem" }}>{benefit.icon}</div>
@@ -119,7 +119,7 @@ const Benefits = () => {
                   fontSize: "clamp(1.1rem, 3vw, 1.3rem)",
                   fontWeight: 600,
                   marginBottom: "0.5rem",
-                  background: "linear-gradient(90deg, #FC466B, #3F5EFB)",
+                  background: "linear-gradient(90deg, #E63D00, #E66700)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   fontFamily: "'Segoe UI', sans-serif",

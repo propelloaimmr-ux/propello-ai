@@ -27,7 +27,7 @@ const SecurityPage = () => {
     <div className="premium-container">
       <div className="step-content">
         <div className="page-header">
-          <RiShieldKeyholeLine size={isMobile ? 28 : 32} color="#fc466b" />
+          <RiShieldKeyholeLine size={isMobile ? 28 : 32} color="#e63d00" />
           <h1>Account Security</h1>
           <p>Manage your account security settings and active sessions</p>
         </div>
@@ -35,7 +35,7 @@ const SecurityPage = () => {
         <div className="security-grid">
           <div className="security-card">
             <div className="card-header">
-              <RiLockPasswordLine size={24} color="#fc466b" />
+              <RiLockPasswordLine size={24} color="#e63d00" />
               <h3>Change Password</h3>
             </div>
             <form onSubmit={handlePasswordChange} className="password-form">
@@ -74,7 +74,7 @@ const SecurityPage = () => {
 
           <div className="security-card">
             <div className="card-header">
-              <RiSmartphoneLine size={24} color="#fc466b" />
+              <RiSmartphoneLine size={24} color="#e63d00" />
               <h3>Two-Factor Authentication</h3>
             </div>
             <div className="toggle-group">
@@ -113,7 +113,7 @@ const SecurityPage = () => {
               <div key={device.id} className="device-card">
                 <div className="device-info">
                   <div className="device-icon">
-                    {device.os === 'iOS' ? <RiSmartphoneLine size={24} color="#fc466b" /> : <RiSmartphoneLine size={24} color="#fc466b" />}
+                    {device.os === 'iOS' ? <RiSmartphoneLine size={24} color="#e63d00" /> : <RiSmartphoneLine size={24} color="#e63d00" />}
                   </div>
                   <div className="device-details">
                     <h4>{device.device} ({device.os})</h4>
@@ -166,7 +166,7 @@ const styles = `
   font-size: 2rem;
   margin: 15px 0 10px;
   font-weight: 700;
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -189,7 +189,7 @@ const styles = `
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(252, 70, 107, 0.1);
+  border: 1px solid rgba(230, 61, 0, 0.1);
 }
 
 .card-header {
@@ -201,7 +201,7 @@ const styles = `
 
 .card-header h3 {
   font-size: 1.3rem;
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
@@ -236,12 +236,12 @@ const styles = `
 
 .form-group input:focus {
   outline: none;
-  border-color: #fc466b;
-  box-shadow: 0 0 0 3px rgba(252, 70, 107, 0.1);
+  border-color: #e63d00;
+  box-shadow: 0 0 0 3px rgba(230, 61, 0, 0.1);
 }
 
 .primary-btn {
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   color: white;
   border: none;
   padding: 14px 20px;
@@ -254,9 +254,9 @@ const styles = `
 }
 
 .primary-btn:hover {
-  background: linear-gradient(90deg, #e14269, #2d4bd8);
+  background: linear-gradient(90deg, #c23400, #c26b00);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(252, 70, 107, 0.3);
+  box-shadow: 0 5px 15px rgba(230, 61, 0, 0.3);
 }
 
 .toggle-group {
@@ -309,7 +309,7 @@ const styles = `
 }
 
 input:checked + .slider {
-  background-color: #fc466b;
+  background-color: #e63d00;
 }
 
 input:checked + .slider:before {
@@ -343,12 +343,12 @@ input:checked + .slider:before {
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(252, 70, 107, 0.1);
+  border: 1px solid rgba(230, 61, 0, 0.1);
 }
 
 .active-sessions h3 {
   font-size: 1.3rem;
-  background: linear-gradient(90deg, #fc466b, #3f5efb);
+  background: linear-gradient(90deg, #e63d00, #e66700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 10px;
@@ -388,9 +388,9 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(252, 70, 107, 0.1);
+  background: rgba(230, 61, 0, 0.1);
   border-radius: 50%;
-  color: #fc466b;
+  color: #e63d00;
 }
 
 .device-details h4 {
@@ -412,8 +412,8 @@ input:checked + .slider:before {
 
 .revoke-btn {
   background: none;
-  border: 1px solid #fc466b;
-  color: #fc466b;
+  border: 1px solid #e63d00;
+  color: #e63d00;
   padding: 8px 15px;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -422,7 +422,7 @@ input:checked + .slider:before {
 }
 
 .revoke-btn:hover {
-  background: #fc466b;
+  background: #e63d00;
   color: white;
 }
 

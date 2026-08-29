@@ -36,7 +36,7 @@ export default function ResetPassword({ onBack }) {
         margin: "0 auto",
         backgroundColor: "white",
         borderRadius: "12px",
-        boxShadow: "0 4px 20px rgba(63, 94, 251, 0.1)",
+        boxShadow: "0 4px 20px rgba(230, 103, 0, 0.1)",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       }}
     >
@@ -45,7 +45,7 @@ export default function ResetPassword({ onBack }) {
           textAlign: "center",
           marginBottom: "20px",
           fontSize: "1.8rem",
-          background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+          background: "linear-gradient(135deg, #e63d00, #e66700)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           fontWeight: "700",
@@ -100,7 +100,7 @@ export default function ResetPassword({ onBack }) {
             padding: "12px",
             width: "100%",
             borderRadius: "8px",
-            background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+            background: "linear-gradient(135deg, #e63d00, #e66700)",
             border: "none",
             fontWeight: "bold",
             cursor: "pointer",
@@ -117,7 +117,7 @@ export default function ResetPassword({ onBack }) {
           style={{
             textAlign: "center",
             marginTop: "10px",
-            color: message.includes("Error") ? "#fc466b" : "#3f5efb",
+            color: message.includes("Error") ? "#e63d00" : "#e66700",
             fontWeight: "500",
           }}
         >
@@ -127,7 +127,7 @@ export default function ResetPassword({ onBack }) {
       <p
         onClick={onBack}
         style={{
-          background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+          background: "linear-gradient(135deg, #e63d00, #e66700)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           cursor: "pointer",

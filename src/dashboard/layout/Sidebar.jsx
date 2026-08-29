@@ -76,7 +76,7 @@ export default function Sidebar() {
             top: "24px",
             right: "24px",
             zIndex: 1000,
-            background: "linear-gradient(135deg, #fc466b, #3f5efb)",
+            background: "linear-gradient(135deg, #e63d00, #e66700)",
             border: "none",
             borderRadius: "50%",
             width: "48px",
@@ -85,7 +85,7 @@ export default function Sidebar() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 4px 12px rgba(252, 70, 107, 0.3)",
+            boxShadow: "0 4px 12px rgba(230, 61, 0, 0.3)",
           }}
         >
           {sidebarOpen ? (
@@ -106,7 +106,7 @@ export default function Sidebar() {
           width: isHD ? "220px" : "250px",
           height: "100vh",
           backgroundColor: "#ffffff",
-          borderRight: "2px solid #fc466b",
+          borderRight: "2px solid #e63d00",
           boxShadow: isMobile ? "4px 0 20px rgba(0,0,0,0.1)" : "none",
           zIndex: 999,
           overflow: "hidden",
@@ -150,7 +150,7 @@ export default function Sidebar() {
                       margin: isHD ? "16px 0 6px" : "20px 0 8px",
                       fontSize: "12px",
                       fontWeight: "600",
-                      color: "#fc466b",
+                      color: "#e63d00",
                     }}
                   >
                     {currentSection}
@@ -169,8 +169,8 @@ export default function Sidebar() {
                     fontSize: isHD ? "14px" : "15px",
                     fontWeight: "500",
                     color: isActive ? "#ffffff" : "#333333",
-                    backgroundColor: isActive ? "linear-gradient(135deg, #fc466b, #3f5efb)" : "transparent",
-                    background: isActive ? "linear-gradient(135deg, #fc466b, #3f5efb)" : "transparent",
+                    backgroundColor: isActive ? "linear-gradient(135deg, #e63d00, #e66700)" : "transparent",
+                    background: isActive ? "linear-gradient(135deg, #e63d00, #e66700)" : "transparent",
                     transition: "all 0.3s ease",
                   })}
                 >
