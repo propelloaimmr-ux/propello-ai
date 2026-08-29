@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaPhone, FaWhatsapp, FaCommentSms, FaEnvelope } from "react-icons/fa6";
 
 const Hero = ({ user }) => {
   const titles = [
@@ -215,6 +216,14 @@ const Hero = ({ user }) => {
             aria-hidden="true"
             className="mic-container"
           >
+            <div className="orbit-ring ring-outer"></div>
+            <div className="orbit-ring ring-inner"></div>
+            <div className="orbit-track">
+              <div className="orbit-node node-1"><span className="orbit-node-inner"><FaPhone /></span></div>
+              <div className="orbit-node node-2"><span className="orbit-node-inner"><FaWhatsapp /></span></div>
+              <div className="orbit-node node-3"><span className="orbit-node-inner"><FaCommentSms /></span></div>
+              <div className="orbit-node node-4"><span className="orbit-node-inner"><FaEnvelope /></span></div>
+            </div>
             <div className="mic" aria-hidden="true">
               <div className="mic-shadow"></div>
               <span className="mic-icon"></span>
@@ -324,6 +333,70 @@ const Hero = ({ user }) => {
           @keyframes shadow-rotate {
             0% { transform: translate(-50%, -50%) rotate(0deg); }
             100% { transform: translate(-50%, -50%) rotate(360deg); }
+          }
+
+          /* Orbiting channel icons around the mic */
+          .orbit-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            border: 1px dashed rgba(230, 61, 0, 0.25);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+          }
+          .ring-outer { width: 300px; height: 300px; }
+          .ring-inner { width: 250px; height: 250px; border-color: rgba(230, 103, 0, 0.2); }
+
+          .orbit-track {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            margin: -150px 0 0 -150px;
+            animation: orbit-spin 16s linear infinite;
+          }
+
+          .orbit-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            margin: -20px 0 0 -20px;
+          }
+          .node-1 { transform: rotate(0deg) translate(150px) rotate(0deg); }
+          .node-2 { transform: rotate(90deg) translate(150px) rotate(-90deg); }
+          .node-3 { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+          .node-4 { transform: rotate(270deg) translate(150px) rotate(-270deg); }
+
+          .orbit-node-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #E63D00;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 14px rgba(28, 25, 23, 0.12);
+            border: 1px solid rgba(230, 61, 0, 0.15);
+            animation: orbit-spin-reverse 16s linear infinite;
+          }
+
+          @keyframes orbit-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+          @keyframes orbit-spin-reverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+          }
+
+          @media (max-width: 600px) {
+            .orbit-ring, .orbit-track { display: none; }
           }
 
           /* Responsive Styles */
