@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaPhone, FaWhatsapp, FaCommentSms, FaEnvelope } from "react-icons/fa6";
+import WorldMapDots from "./WorldMapDots";
 
 const Hero = ({ user }) => {
   const titles = [
@@ -55,6 +56,8 @@ const Hero = ({ user }) => {
           <span className="backdrop-glow glow-a" />
           <span className="backdrop-glow glow-b" />
         </div>
+
+        <WorldMapDots className="hero-worldmap" />
 
         <div
           style={{
@@ -238,6 +241,26 @@ const Hero = ({ user }) => {
 
         {/* 🎤 Mic CSS */}
         <style>{`
+          .hero-worldmap {
+            position: absolute;
+            left: 50%;
+            bottom: -34%;
+            width: 135%;
+            max-width: 1900px;
+            height: auto;
+            transform: translateX(-50%);
+            color: #E63D00;
+            opacity: 0.4;
+            z-index: 0;
+            pointer-events: none;
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 18%);
+            mask-image: linear-gradient(to bottom, transparent, black 18%);
+          }
+
+          @media (max-width: 768px) {
+            .hero-worldmap { opacity: 0.3; width: 220%; bottom: -20%; }
+          }
+
           .mic {
             position: relative;
             width: 220px;
