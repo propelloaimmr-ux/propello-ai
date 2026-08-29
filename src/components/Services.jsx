@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import VoiceFlowShowcase from "./VoiceFlowShowcase";
 import {
   MdOutbound,
   MdMonetizationOn,
@@ -58,6 +59,7 @@ const Services = () => {
         className="services-main"
       >
         <h2 className="gradient-text title-heading">Our Services</h2>
+        <VoiceFlowShowcase />
         <div className="services-container">
           {services.map((s, idx) => (
             <motion.div
