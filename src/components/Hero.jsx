@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaPhone, FaWhatsapp, FaCommentSms, FaEnvelope } from "react-icons/fa6";
+import { FaPhone, FaWhatsapp, FaCommentSms, FaEnvelope, FaRobot } from "react-icons/fa6";
 import WorldMapDots from "./WorldMapDots";
 
 const Hero = ({ user }) => {
@@ -234,7 +234,7 @@ const Hero = ({ user }) => {
             </div>
             <div className="mic" aria-hidden="true">
               <div className="mic-shadow"></div>
-              <span className="mic-icon"></span>
+              <FaRobot className="mic-robot-icon" />
             </div>
           </div>
         </div>
@@ -289,46 +289,19 @@ const Hero = ({ user }) => {
             background-color: #FFE0CC;
             animation: circle-size 0.8s linear infinite alternate;
           }
-          .mic-icon {
-            box-sizing: border-box;
+          .mic-robot-icon {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(3.2);
-            display: block;
-            width: 16px;
-            height: 12px;
-            border-bottom-left-radius: 120px;
-            border-bottom-right-radius: 120px;
-            border: 2px solid;
-            border-top: 0;
-            margin-top: 20px;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            color: #E63D00;
             z-index: 3;
-            border-color: #E66700;
+            animation: robot-bob 2.4s ease-in-out infinite;
           }
-          .mic-icon::before, .mic-icon::after {
-            content: "";
-            display: block;
-            box-sizing: border-box;
-            position: absolute;
-            border-color: #E66700;
-          }
-          .mic-icon::before {
-            width: 2px;
-            height: 5px;
-            top: calc(100% + 1px);
-            left: 50%;
-            transform: translate(-50%, 0);
-            background-color: #E66700;
-          }
-          .mic-icon::after {
-            border: 2px solid;
-            width: 8px;
-            height: 18px;
-            left: 50%;
-            top: -10px;
-            border-radius: 4px;
-            transform: translate(-50%, 0);
+          @keyframes robot-bob {
+            0%, 100% { transform: translate(-50%, -50%); }
+            50% { transform: translate(-50%, -54%); }
           }
           .mic-shadow {
             width: 220px;
