@@ -4,9 +4,9 @@ import { FaUserTie, FaRocket, FaChartLine } from "react-icons/fa";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const steps = [
-  { icon: <FaUserTie className="step-icon" />, num: "01", title: "Select Your Agent & Script", desc: "Pick your industry-ready AI agent and share your scripts. We convert them into dynamic conversations using NEPQ and business context." },
-  { icon: <FaRocket className="step-icon" />, num: "02", title: "Go Live Instantly", desc: "Our voice agents are trained and deployed within days." },
-  { icon: <FaChartLine className="step-icon" />, num: "03", title: "Track, Improve, and Scale", desc: "Get access to live dashboards for analytics, sentiment analysis, and CRM-integrated actions to drive performance improvement." },
+  { icon: <FaUserTie className="step-icon icon-select" />, num: "01", title: "Select Your Agent & Script", desc: "Pick your industry-ready AI agent and share your scripts. We convert them into dynamic conversations using NEPQ and business context." },
+  { icon: <FaRocket className="step-icon icon-launch" />, num: "02", title: "Go Live Instantly", desc: "Our voice agents are trained and deployed within days." },
+  { icon: <FaChartLine className="step-icon icon-track" />, num: "03", title: "Track, Improve, and Scale", desc: "Get access to live dashboards for analytics, sentiment analysis, and CRM-integrated actions to drive performance improvement." },
 ];
 
 const Working = () => {
@@ -34,6 +34,8 @@ const Working = () => {
               whileHover={{ y: -8 }}
             >
               <div className="step-icon-container">
+                <span className="step-pulse-ring" />
+                <span className="step-pulse-ring ring-delay" />
                 <div className="step-icon-bg">{s.icon}</div>
                 <div className="step-number">{s.num}</div>
               </div>
@@ -43,8 +45,11 @@ const Working = () => {
 
             {i < steps.length - 1 && (
               <div className="connector">
+                <div className="connector-line">
+                  <span className="connector-flow" />
+                  <span className="connector-dot" />
+                </div>
                 <BsArrowRightShort className="arrow-icon" />
-                <div className="connector-line"></div>
               </div>
             )}
           </React.Fragment>
@@ -136,7 +141,27 @@ const Working = () => {
           height: 80px;
         }
 
+        .step-pulse-ring {
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          border: 2px solid #E63D00;
+          animation: step-pulse 2.6s ease-out infinite;
+          pointer-events: none;
+        }
+
+        .step-pulse-ring.ring-delay {
+          animation-delay: 1.3s;
+        }
+
+        @keyframes step-pulse {
+          0% { transform: scale(0.85); opacity: 0.6; }
+          100% { transform: scale(1.45); opacity: 0; }
+        }
+
         .step-icon-bg {
+          position: relative;
+          z-index: 1;
           width: 100%;
           height: 100%;
           background: linear-gradient(135deg, #E63D00, #E66700);
@@ -147,6 +172,25 @@ const Working = () => {
           color: white;
           font-size: 1.8rem;
           box-shadow: 0 5px 15px rgba(230, 61, 0, 0.3);
+        }
+
+        .icon-select { animation: icon-breathe 2.4s ease-in-out infinite; }
+        .icon-launch { animation: icon-launch 1.8s ease-in-out infinite; }
+        .icon-track { animation: icon-track 2s ease-in-out infinite; }
+
+        @keyframes icon-breathe {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.12); }
+        }
+
+        @keyframes icon-launch {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-5px) rotate(8deg); }
+        }
+
+        @keyframes icon-track {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-3px); }
         }
 
         .step-number {
@@ -195,17 +239,57 @@ const Working = () => {
         }
 
         .arrow-icon {
-          font-size: 2.5rem;
+          font-size: 2rem;
           color: #E66700;
-          margin-bottom: 0.5rem;
-          opacity: 0.7;
+          opacity: 0.6;
         }
 
         .connector-line {
+          position: relative;
           width: 60px;
-          height: 2px;
-          background: linear-gradient(90deg, #E63D00, #E66700);
-          opacity: 0.3;
+          height: 3px;
+          border-radius: 2px;
+          background: repeating-linear-gradient(
+            90deg,
+            rgba(230, 61, 0, 0.25) 0 6px,
+            transparent 6px 12px
+          );
+          margin-bottom: 0.5rem;
+          overflow: visible;
+        }
+
+        .connector-flow {
+          position: absolute;
+          inset: 0;
+          border-radius: 2px;
+          background: linear-gradient(90deg, transparent, #E63D00, transparent);
+          background-size: 200% 100%;
+          animation: connector-flow-move 1.8s linear infinite;
+        }
+
+        .connector-dot {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #E63D00;
+          box-shadow: 0 0 8px 2px rgba(230, 61, 0, 0.6);
+          transform: translate(-50%, -50%);
+          animation: connector-dot-move 1.8s linear infinite;
+        }
+
+        @keyframes connector-flow-move {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+
+        @keyframes connector-dot-move {
+          0% { left: 0; opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { left: 100%; opacity: 0; }
         }
 
         @media (max-width: 1200px) {
@@ -273,6 +357,35 @@ const Working = () => {
           .connector-line {
             width: 2px;
             height: 30px;
+            background: repeating-linear-gradient(
+              180deg,
+              rgba(230, 61, 0, 0.25) 0 6px,
+              transparent 6px 12px
+            );
+          }
+
+          .connector-flow {
+            background: linear-gradient(180deg, transparent, #E63D00, transparent);
+            background-size: 100% 200%;
+            animation: connector-flow-move-v 1.8s linear infinite;
+          }
+
+          .connector-dot {
+            top: 0;
+            left: 50%;
+            animation: connector-dot-move-v 1.8s linear infinite;
+          }
+
+          @keyframes connector-flow-move-v {
+            0% { background-position: 0 200%; }
+            100% { background-position: 0 -200%; }
+          }
+
+          @keyframes connector-dot-move-v {
+            0% { top: 0; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
           }
         }
 
