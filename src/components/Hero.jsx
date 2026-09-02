@@ -4,9 +4,10 @@ import WorldMapDots from "./WorldMapDots";
 
 const Hero = ({ user }) => {
   const titles = [
-    "Conversational AI That Sells",
+    "Conversational AI Agent That Sells",
     "Engage Customers in Real Time",
-    "AI Assistants for Growth"
+    "AI Assistants for Growth",
+    "Faster Hiring with AI"
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
