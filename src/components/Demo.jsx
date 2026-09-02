@@ -1,6 +1,52 @@
-import { FaPlay, FaCode, FaDesktop } from 'react-icons/fa';
+import { useRef, useState, useEffect } from 'react';
+import { FaPlay, FaPause, FaCode, FaDesktop } from 'react-icons/fa';
+
+const waveHeights = Array.from({ length: 40 }, (_, i) => 8 + Math.abs(Math.sin(i * 0.6)) * 32);
+
+const formatTime = (secs) => {
+  if (!isFinite(secs)) return '0:00';
+  const m = Math.floor(secs / 60);
+  const s = Math.floor(secs % 60).toString().padStart(2, '0');
+  return `${m}:${s}`;
+};
 
 const Demo = () => {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const onTime = () => {
+      setCurrentTime(audio.currentTime);
+      setProgress(audio.duration ? (audio.currentTime / audio.duration) * 100 : 0);
+    };
+    const onLoaded = () => setDuration(audio.duration);
+    const onEnd = () => setIsPlaying(false);
+    audio.addEventListener('timeupdate', onTime);
+    audio.addEventListener('loadedmetadata', onLoaded);
+    audio.addEventListener('ended', onEnd);
+    return () => {
+      audio.removeEventListener('timeupdate', onTime);
+      audio.removeEventListener('loadedmetadata', onLoaded);
+      audio.removeEventListener('ended', onEnd);
+    };
+  }, []);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <>
       <style>{`
@@ -44,15 +90,92 @@ const Demo = () => {
 
         #demo .video-box {
           position: relative;
-          padding-top: 56.25%;
+          aspect-ratio: 16 / 9;
           background: linear-gradient(135deg, #f8f9fa, #f1f3f5);
           border-radius: 32px;
           border: 1px solid rgba(230, 61, 0, 0.3);
-          box-shadow: 
+          box-shadow:
             inset 0 0 25px rgba(230, 61, 0, 0.1),
             0 10px 30px rgba(230, 103, 0, 0.1);
           overflow: hidden;
           transition: all 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1.25rem;
+          padding: 2rem;
+          box-sizing: border-box;
+        }
+
+        #demo .audio-label {
+          position: absolute;
+          top: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 0.78rem;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          color: #E66700;
+          opacity: 0.75;
+        }
+
+        #demo .audio-waveform {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3px;
+          height: 44px;
+          width: 100%;
+          max-width: 320px;
+        }
+
+        #demo .audio-bar {
+          flex: 1;
+          max-width: 5px;
+          border-radius: 3px;
+          background: linear-gradient(180deg, #E63D00, #ffb366);
+          transform: scaleY(0.35);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+          opacity: 0.5;
+        }
+
+        #demo .audio-bar.active {
+          opacity: 1;
+          animation: demo-wave 1.1s ease-in-out infinite;
+        }
+
+        @keyframes demo-wave {
+          0%, 100% { transform: scaleY(0.35); }
+          50% { transform: scaleY(1); }
+        }
+
+        #demo .audio-progress-track {
+          width: 100%;
+          max-width: 340px;
+          height: 4px;
+          border-radius: 2px;
+          background: rgba(230, 61, 0, 0.15);
+          overflow: hidden;
+        }
+
+        #demo .audio-progress-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #E63D00, #E66700);
+          border-radius: 2px;
+          transition: width 0.15s linear;
+        }
+
+        #demo .audio-time {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 340px;
+          font-size: 0.78rem;
+          color: #78716c;
+          margin-top: -0.75rem;
         }
 
         #demo .video-box:hover {
@@ -63,31 +186,33 @@ const Demo = () => {
         }
 
         #demo .play-btn {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          position: relative;
           z-index: 2;
-          width: 120px;
-          height: 120px;
+          width: 100px;
+          height: 100px;
           background: radial-gradient(circle at center, rgba(230, 61, 0, 0.9) 0%, rgba(230, 103, 0, 0.9) 100%);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 3rem;
+          font-size: 2.4rem;
           color: white;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
           box-shadow:
             0 0 20px rgba(230, 61, 0, 0.5),
             0 0 40px rgba(230, 103, 0, 0.5);
           border: 2px solid white;
+          flex-shrink: 0;
+        }
+
+        #demo .play-btn.is-playing {
+          font-size: 2.1rem;
         }
 
         #demo .play-btn:hover,
         #demo .play-btn:active {
-          transform: translate(-50%, -50%) scale(1.1);
+          transform: scale(1.1);
           box-shadow:
             0 0 30px rgba(230, 61, 0, 0.7),
             0 0 50px rgba(230, 103, 0, 0.7);
@@ -416,10 +541,32 @@ const Demo = () => {
           <h2>Experience Propello AI in Action</h2>
 
           <div className="grid">
-            {/* Video Box */}
+            {/* Audio Demo Box */}
             <div className="video-box">
-              <div className="play-btn">
-                <FaPlay />
+              <audio ref={audioRef} src="/demo-call-sample.mp3" preload="metadata" />
+
+              <div className="audio-label">Sample Call Recording</div>
+
+              <div className={`play-btn ${isPlaying ? 'is-playing' : ''}`} onClick={togglePlay} role="button" aria-label={isPlaying ? 'Pause sample call' : 'Play sample call'}>
+                {isPlaying ? <FaPause /> : <FaPlay />}
+              </div>
+
+              <div className="audio-waveform" aria-hidden="true">
+                {waveHeights.map((h, i) => (
+                  <span
+                    key={i}
+                    className={`audio-bar ${isPlaying ? 'active' : ''}`}
+                    style={{ height: `${h}px`, animationDelay: `${i * 0.04}s` }}
+                  />
+                ))}
+              </div>
+
+              <div className="audio-progress-track">
+                <div className="audio-progress-fill" style={{ width: `${progress}%` }} />
+              </div>
+              <div className="audio-time">
+                <span>{formatTime(currentTime)}</span>
+                <span>{formatTime(duration)}</span>
               </div>
             </div>
 
