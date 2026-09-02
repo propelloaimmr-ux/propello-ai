@@ -8,6 +8,7 @@ import {
   MdEnhancedEncryption,
   MdHub,
   MdQueryStats,
+  MdPersonSearch,
 } from "react-icons/md";
 
 const services = [
@@ -40,6 +41,11 @@ const services = [
     title: "Custom Dashboards & Analytics",
     description: "Monitor AI call performance and customer engagement in real-time.",
     icon: <MdQueryStats size={40} />,
+  },
+  {
+    title: "AI-Powered Hiring",
+    description: "AI phone screening and resume matching to shortlist candidates faster — you make the final call.",
+    icon: <MdPersonSearch size={40} />,
   },
 ];
 
