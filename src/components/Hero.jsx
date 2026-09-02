@@ -3,12 +3,14 @@ import { FaPhone, FaWhatsapp, FaCommentSms, FaEnvelope, FaRobot } from "react-ic
 import WorldMapDots from "./WorldMapDots";
 
 const Hero = ({ user }) => {
-  const titles = [
-    "Conversational AI Agent That Sells",
-    "Engage Customers in Real Time",
-    "AI Assistants for Growth",
-    "Faster Hiring with AI"
+  const defaultDescription = "Premium Voice AI for Business: Smarter Conversations, Better Conversions, and Seamless Customer Experiences";
+  const heroSlides = [
+    { title: "Conversational AI Agent That Sells", description: defaultDescription },
+    { title: "Engage Customers in Real Time", description: defaultDescription },
+    { title: "AI Assistants for Growth", description: defaultDescription },
+    { title: "Faster Hiring Using AI", description: "AI phone screening and resume matching to shortlist candidates faster — you make the final call." }
   ];
+  const titles = heroSlides.map((s) => s.title);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -122,7 +124,7 @@ const Hero = ({ user }) => {
               }}
               className="hero-title"
             >
-              {titles[currentIndex]}
+              {heroSlides[currentIndex].title}
             </h1>
 
             <p
@@ -134,10 +136,12 @@ const Hero = ({ user }) => {
                 lineHeight: 1.6,
                 userSelect: "none",
                 textAlign: "left",
+                opacity: fade ? 1 : 0,
+                transition: "opacity 0.4s ease-in-out",
               }}
               className="hero-description"
             >
-              Premium Voice AI for Business: Smarter Conversations, Better Conversions, and Seamless Customer Experiences
+              {heroSlides[currentIndex].description}
             </p>
 
             <div
